@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProbSolv - Deep Solutions, Advanced Tech</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .service {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #007BFF;
+    }
+    .cta {
+      background-color: #e9f7ff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    .cta a {
+      display: inline-block;
+      margin: 10px;
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    a {
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ProbSolv</h1>
+    <p>Deep Solutions, Advanced Tech</p>
+  </header>  <section>
+    <h2>Our Services</h2><div class="service">
+  <h3>📘 AI Education Setup (AI LearnPad)</h3>
+  <p>Training students on ChatGPT, Canva, Grammarly. Local language lessons. Career counseling. Notion templates for schools.</p>
+</div>
+
+<div class="service">
+  <h3>🛍 WhatsApp Store Builder (Digital Dukaan)</h3>
+  <p>Create WhatsApp menus with contact buttons. Integrate delivery and Facebook shops. Teach storeowners how to use it.</p>
+</div>
+
+<div class="service">
+  <h3>🎥 QR Storytelling (QRaahi)</h3>
+  <p>Create video/story links via QR codes. Promote shop owner background, vision, and trust. Add QR to boards and banners.</p>
+</div>
+
+<div class="service">
+  <h3>📝 Digital Wasiat / Asset Forms (Wasiat Safeguard)</h3>
+  <p>Create Urdu forms for will writing, debts, family guidance. Send copies via Google Drive or email. Easy fillable access.</p>
+</div>
+
+<div class="service">
+  <h3>🗣 Voice-to-Form Assistant (AwazForm)</h3>
+  <p>Convert elders' voice notes into proper applications like pensions, electricity, or ID. Deliver printed or digital version.</p>
+</div>
+
+<div class="service">
+  <h3>🔧 Shop Surveillance Setup (MiniCam)</h3>
+  <p>Set up affordable WiFi mini-cameras with mobile alerts for local shops. Monthly support offered.</p>
+</div>
+
+<div class="cta">
+  <h2>Get a FREE Demo!</h2>
+  <p>Try any service once to experience ProbSolv in action.</p>
+  <a href="https://wa.me/923272583013">WhatsApp Us Now</a>
+</div>
+
+  </section>  <footer>
+    <p>📞 0327 2583013 | <a href="https://www.facebook.com/profile.php?id=61578139677102" target="_blank">Facebook: Solution Provider</a></p>
+    <p>&copy; 2025 ProbSolv. All rights reserved.</p>
+  </footer>
+</body>
+</html>
