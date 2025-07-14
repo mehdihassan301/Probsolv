@@ -1,107 +1,135 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProbSolv - Deep Solutions, Advanced Tech</title>
+  <title>ProbSolv - Smart Solutions Lab</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f8f9fa;
+      background: linear-gradient(to right, #e6f0ff, #ffffff);
       color: #333;
     }
     header {
-      background-color: #007BFF;
+      background: linear-gradient(to right, #004aad, #003380);
       color: white;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    nav {
+      background-color: #002966;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
     }
     section {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
     }
-    .service {
-      margin-bottom: 30px;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
     }
-    h2 {
-      color: #007BFF;
-    }
-    .cta {
-      background-color: #e9f7ff;
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      margin-top: 40px;
-    }
-    .cta a {
-      display: inline-block;
-      margin: 10px;
-      background: #007BFF;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
+    .card:hover {
+      transform: translateY(-5px);
     }
     footer {
-      background-color: #343a40;
+      background-color: #003380;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
-    a {
-      color: #007BFF;
+    .cta {
+      margin-top: 30px;
+    }
+    .cta a {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+      display: inline-block;
+    }
+    .cta a.facebook {
+      background-color: #3b5998;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>ProbSolv</h1>
-    <p>Deep Solutions, Advanced Tech</p>
-  </header>  <section>
-    <h2>Our Services</h2><div class="service">
-  <h3>📘 AI Education Setup (AI LearnPad)</h3>
-  <p>Training students on ChatGPT, Canva, Grammarly. Local language lessons. Career counseling. Notion templates for schools.</p>
-</div>
+    <p>Smart AI-Powered Solutions for Your Local Needs</p>
+  </header>
 
-<div class="service">
-  <h3>🛍 WhatsApp Store Builder (Digital Dukaan)</h3>
-  <p>Create WhatsApp menus with contact buttons. Integrate delivery and Facebook shops. Teach storeowners how to use it.</p>
-</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/services.html">Services</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
 
-<div class="service">
-  <h3>🎥 QR Storytelling (QRaahi)</h3>
-  <p>Create video/story links via QR codes. Promote shop owner background, vision, and trust. Add QR to boards and banners.</p>
-</div>
+  <section>
+    <h2>Welcome to ProbSolv</h2>
+    <p>We help solve daily problems using technology — from AI education to QR storytelling.</p>
 
-<div class="service">
-  <h3>📝 Digital Wasiat / Asset Forms (Wasiat Safeguard)</h3>
-  <p>Create Urdu forms for will writing, debts, family guidance. Send copies via Google Drive or email. Easy fillable access.</p>
-</div>
+    <div class="services">
+      <div class="card">
+        <h3>AI Education Lab</h3>
+        <p>Teach students AI tools (ChatGPT, Grammarly, Canva) with local language guides.</p>
+      </div>
+      <div class="card">
+        <h3>WhatsApp Store Setup</h3>
+        <p>Build WhatsApp-based product menus and teach shopkeepers to share them.</p>
+      </div>
+      <div class="card">
+        <h3>QR Storytelling</h3>
+        <p>Showcase shop/business stories via scannable QR video banners.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Wasiat</h3>
+        <p>Create secure, fillable Urdu forms for will, family instructions, and asset lists.</p>
+      </div>
+      <div class="card">
+        <h3>Awaz Form</h3>
+        <p>Convert elderly voice notes into digital forms for utilities and pensions.</p>
+      </div>
+      <div class="card">
+        <h3>MiniCam Surveillance</h3>
+        <p>Install budget security camera kits in shops with alerts and live viewing.</p>
+      </div>
+    </div>
 
-<div class="service">
-  <h3>🗣 Voice-to-Form Assistant (AwazForm)</h3>
-  <p>Convert elders' voice notes into proper applications like pensions, electricity, or ID. Deliver printed or digital version.</p>
-</div>
+    <div class="cta">
+      <a href="https://wa.me/923272583013" target="_blank">📱 Contact on WhatsApp</a>
+      <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="facebook">🌐 Facebook Page</a>
+    </div>
+  </section>
 
-<div class="service">
-  <h3>🔧 Shop Surveillance Setup (MiniCam)</h3>
-  <p>Set up affordable WiFi mini-cameras with mobile alerts for local shops. Monthly support offered.</p>
-</div>
-
-<div class="cta">
-  <h2>Get a FREE Demo!</h2>
-  <p>Try any service once to experience ProbSolv in action.</p>
-  <a href="https://wa.me/923272583013">WhatsApp Us Now</a>
-</div>
-
-  </section>  <footer>
-    <p>📞 0327 2583013 | <a href="https://www.facebook.com/profile.php?id=61578139677102" target="_blank">Facebook: Solution Provider</a></p>
-    <p>&copy; 2025 ProbSolv. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 ProbSolv - All Rights Reserved</p>
   </footer>
 </body>
 </html>
