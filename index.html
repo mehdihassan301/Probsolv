@@ -4,22 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ProbSolv - Smart Solutions Lab</title>
+  <meta name="description" content="ProbSolv provides AI education, WhatsApp store setup, QR storytelling, digital Wasiat, and tech services in Sindh, Pakistan.">
+  <meta name="keywords" content="ProbSolv,Sindh,AI education,WhatsApp store,QR storytelling,Wasiat,form,MiniCam">
+  <meta property="og:title" content="ProbSolv - Smart Solutions Lab">
+  <meta property="og:description" content="Smart AI-powered services for local problems. Education, security, digital tools, and more.">
+  <meta property="og:url" content="https://www.probsolv.online">
+  <meta property="og:image" content="https://www.probsolv.online/banner.jpg">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #e6f0ff, #ffffff);
+      background-color: #f9f9f9;
       color: #333;
     }
     header {
-      background: linear-gradient(to right, #004aad, #003380);
+      background-color: #004aad;
       color: white;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     nav {
-      background-color: #002966;
+      background-color: #003380;
       display: flex;
       justify-content: center;
       padding: 10px 0;
@@ -29,10 +34,32 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
-      transition: color 0.3s;
     }
-    nav a:hover {
+    nav a.active {
       color: #ffd700;
+      text-decoration: underline;
+    }
+    section.hero {
+      background: linear-gradient(to right, #004aad, #00b4db);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section.hero h2 {
+      font-size: 2.2em;
+    }
+    section.hero p {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    section.hero a {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
     }
     section {
       padding: 40px 20px;
@@ -48,14 +75,10 @@
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     footer {
-      background-color: #003380;
+      background-color: #004aad;
       color: white;
       text-align: center;
       padding: 20px;
@@ -66,12 +89,10 @@
     .cta a {
       background-color: #25d366;
       color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 5px;
       text-decoration: none;
       margin: 0 10px;
-      font-size: 16px;
-      display: inline-block;
     }
     .cta a.facebook {
       background-color: #3b5998;
@@ -85,14 +106,20 @@
   </header>
 
   <nav>
-    <a href="/">Home</a>
-    <a href="/services.html">Services</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+  <section class="hero">
     <h2>Welcome to ProbSolv</h2>
+    <p>We solve the problems others ignore — using AI, automation, and creative tech solutions for real people in Pakistan.</p>
+    <a href="https://wa.me/923272583013" target="_blank">📲 Get Free Help Now</a>
+  </section>
+
+  <section>
+    <h2>What We Offer</h2>
     <p>We help solve daily problems using technology — from AI education to QR storytelling.</p>
 
     <div class="services">
@@ -133,3 +160,4 @@
   </footer>
 </body>
 </html>
+
