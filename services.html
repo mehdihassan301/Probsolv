@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ProbSolv Services</title>
+  <title>Our Services - ProbSolv</title>
+  <meta name="description" content="Detailed list of services offered by ProbSolv — AI education, WhatsApp stores, QR storytelling, Wasiat forms, and surveillance.">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
-      color: #222;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
     header {
       background-color: #004aad;
@@ -29,82 +30,85 @@
       margin: 0 15px;
       font-weight: bold;
     }
-    h2 {
-      text-align: center;
-      margin-top: 30px;
+    nav a.active {
+      color: #ffd700;
+      text-decoration: underline;
     }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    section {
       padding: 40px 20px;
     }
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h3 {
+    h2 {
+      text-align: center;
       color: #004aad;
+    }
+    .service {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .service h3 {
+      color: #003380;
     }
     footer {
       background-color: #004aad;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Our Services</h1>
-    <p>Technology-backed local solutions to real problems</p>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+  <h1>Our Services</h1>
+  <p>Solutions That Solve Real Problems with Technology</p>
+</header>
 
-  <h2>Explore What We Offer</h2>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html" class="active">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <div class="services">
-    <div class="card">
-      <h3>AI Education Lab</h3>
-      <p>Train students on AI tools like ChatGPT, Canva, and Grammarly in Urdu/Sindhi. Provide Notion templates for school use and offer AI career counseling.</p>
-    </div>
-    <div class="card">
-      <h3>WhatsApp Digital Dukaan</h3>
-      <p>Create WhatsApp stores with product menus, payment/contact buttons, and catalog-sharing tips. Integrate with Facebook Shops or local riders.</p>
-    </div>
-    <div class="card">
-      <h3>QR Storytelling (QRaahi)</h3>
-      <p>Produce QR codes linking to personal/shop videos or pages that tell their story, mission, and achievements. Ideal for banners and packaging.</p>
-    </div>
-    <div class="card">
-      <h3>Digital Wasiat</h3>
-      <p>Make custom Urdu forms for wills, property records, and final instructions. Save to Google Drive or email with fillable guidance.</p>
-    </div>
-    <div class="card">
-      <h3>AwazForm</h3>
-      <p>Turn voice notes from elders into typed government forms — pensions, gas, electricity, etc. Delivered via print or WhatsApp.</p>
-    </div>
-    <div class="card">
-      <h3>MiniCam Setup</h3>
-      <p>Install low-cost WiFi mini-cameras for shops. Include motion alerts, live viewing, and monthly support options.</p>
-    </div>
+<section>
+  <div class="service">
+    <h3>1. AI Education Setup (ProbSolv AI Lab / LearnPad)</h3>
+    <p>We teach students how to use tools like ChatGPT, Grammarly, and Canva in Urdu/Sindhi. We also offer AI-based career counseling and Notion templates for schools.</p>
   </div>
 
-  <footer>
-    <p>&copy; 2025 ProbSolv | Smart Solutions, Real Impact</p>
-  </footer>
+  <div class="service">
+    <h3>2. WhatsApp Business Store (ProbSolv Digital Dukaan)</h3>
+    <p>Create digital menus, payment/contact buttons, and teach shopkeepers to manage orders directly in WhatsApp. Connect to Facebook Shops or delivery riders.</p>
+  </div>
+
+  <div class="service">
+    <h3>3. QR Storytelling (ProbSolv QRaahi)</h3>
+    <p>Create QR codes that link to shop or personal story videos. Attach to banners, packaging, or boards to create brand trust and digital storytelling.</p>
+  </div>
+
+  <div class="service">
+    <h3>4. Digital Wasiat Forms (ProbSolv Wasiat Safeguard)</h3>
+    <p>We create Urdu fillable forms for family instructions, property details, debts, and final wishes. Delivered via email or drive link for easy access.</p>
+  </div>
+
+  <div class="service">
+    <h3>5. Voice-to-Form Assistant (ProbSolv AwazForm)</h3>
+    <p>Elders can send voice notes, and we convert them into typed forms — pension, gas/electricity requests, or applications. Forms can be printed or sent digitally.</p>
+  </div>
+
+  <div class="service">
+    <h3>6. MiniCam Security Setup (ProbSolv MiniCam)</h3>
+    <p>Install affordable WiFi mini cameras in shops. Customers get mobile alerts and support for live monitoring. One-time setup + monthly support.</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 ProbSolv - Smart Solutions Lab</p>
+</footer>
+
 </body>
 </html>
