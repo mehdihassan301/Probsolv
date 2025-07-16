@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ProbSolv - Smart Solutions Lab</title>
   <meta name="description" content="ProbSolv offers AI-powered education, QR storytelling, WhatsApp stores, and more. Helping Sindh and Pakistan grow through digital solutions.">
-  
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
   <script>
@@ -14,6 +14,8 @@
     gtag('js', new Date());
     gtag('config', 'G-3T7D7FQX6L');
   </script>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
     body {
@@ -40,6 +42,10 @@
       margin: 0 15px;
       font-weight: bold;
     }
+    nav a.active {
+      color: #ffd700;
+      text-decoration: underline;
+    }
     section {
       padding: 40px 20px;
       text-align: center;
@@ -64,6 +70,10 @@
     }
     .cta {
       margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
     .cta a {
       background-color: #25d366;
@@ -71,10 +81,15 @@
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
-      margin: 0 10px;
     }
     .cta a.facebook {
       background-color: #3b5998;
+    }
+    .cta a.instagram {
+      background-color: #e4405f;
+    }
+    .cta a.youtube {
+      background-color: #ff0000;
     }
   </style>
 </head>
@@ -124,8 +139,10 @@
     </div>
 
     <div class="cta">
-      <a href="https://wa.me/923272583013" target="_blank">📱 Contact on WhatsApp</a>
-      <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="facebook">🌐 Facebook Page</a>
+      <a href="https://wa.me/923272583013" target="_blank">📱 WhatsApp</a>
+      <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="facebook">🌐 Facebook</a>
+      <a href="https://www.instagram.com/probsolv.pk?igsh=ZGUzMzM3NWJiOQ==" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank" class="youtube">▶️ YouTube</a>
     </div>
   </section>
 
