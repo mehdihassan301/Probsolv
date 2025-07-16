@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - ProbSolv</title>
-  <meta name="description" content="Reach out to ProbSolv through WhatsApp, Facebook, Instagram, or YouTube. We solve real problems using AI and digital services.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - ProbSolv</title>
+  <meta name="description" content="Contact ProbSolv for AI-powered solutions, tech services, and support in Sindh, Pakistan.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
       margin: 0;
@@ -38,69 +39,71 @@
       padding: 40px 20px;
       text-align: center;
     }
-    h2 {
-      color: #004aad;
+    form {
+      max-width: 500px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-    .buttons a {
-      display: inline-block;
-      padding: 12px 20px;
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
+      font-size: 16px;
     }
-    .whatsapp { background-color: #25d366; }
-    .facebook { background-color: #3b5998; }
-    .instagram { background-color: #e1306c; }
-    .youtube { background-color: #ff0000; }
-
+    form button {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #003380;
+    }
     footer {
       background-color: #004aad;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Contact ProbSolv</h1>
+    <p>We’d love to hear from you! Send your message below.</p>
+  </header>
 
-<header>
-  <h1>Contact ProbSolv</h1>
-  <p>We're here to help solve your daily problems with digital solutions.</p>
-</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="contact.html" class="active">Contact</a>
-</nav>
+  <section>
+    <h2>Get In Touch</h2>
+    <p>Please fill out the form below to send us a message.</p>
 
-<section>
-  <h2>Reach Out</h2>
-  <p>Connect with us on your favorite platform and start solving problems today!</p>
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-  <div class="buttons">
-    <a href="https://wa.me/923272583013" target="_blank" class="whatsapp">📱 WhatsApp</a>
-    <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="facebook">🌐 Facebook</a>
-    <a href="https://www.instagram.com/probsolv.pk?igsh=ZGUzMzM3NWJiOQ==" target="_blank" class="instagram">📸 Instagram</a>
-    <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank" class="youtube">▶️ YouTube</a>
-  </div>
-
-  <p style="margin-top: 30px; color: #888;">More contact options (form, email, location) coming soon.</p>
-</section>
-
-<footer>
-  <p>&copy; 2025 ProbSolv - Powered by Real Purpose</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 ProbSolv - All Rights Reserved</p>
+  </footer>
 </body>
 </html>
