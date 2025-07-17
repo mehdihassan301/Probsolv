@@ -1,110 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - ProbSolv</title>
-  <meta name="description" content="Contact ProbSolv for AI-powered solutions, tech services, and support in Sindh, Pakistan.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - ProbSolv</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
     }
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #003380;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a.active {
-      color: #ffd700;
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    form {
-      max-width: 500px;
-      margin: auto;
-      background-color: white;
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
       padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    form input, form textarea {
-      width: 100%;
+
+    h1 {
+      text-align: center;
+      color: #004aad;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
       padding: 12px;
       margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
       font-size: 16px;
     }
-    form button {
+
+    button {
       background-color: #004aad;
       color: white;
+      padding: 12px;
       border: none;
-      padding: 12px 24px;
-      border-radius: 5px;
       font-size: 16px;
+      border-radius: 8px;
       cursor: pointer;
     }
-    form button:hover {
-      background-color: #003380;
+
+    button:hover {
+      background-color: #00338d;
     }
-    footer {
-      background-color: #004aad;
-      color: white;
+
+    #responseMsg {
+      margin-top: 20px;
+      font-weight: bold;
       text-align: center;
-      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <div class="container">
     <h1>Contact ProbSolv</h1>
-    <p>We’d love to hear from you! Send your message below.</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-
-  <section>
-    <h2>Get In Touch</h2>
-    <p>Please fill out the form below to send us a message.</p>
-
-    <form action="https://formsubmit.co/sameer@probsolv.online" method="POST">
-      <input type="hidden" name="_captcha" value="false">
+    <form id="contactForm" method="POST">
+      <input type="hidden" name="_captcha" value="true">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://probsolv.online/thankyou.html">
+      <input type="hidden" name="_autoresponse" value="Thanks for contacting ProbSolv! We’ll reply shortly.">
+      <input type="hidden" name="_subject" value="New Contact Message from ProbSolv">
+
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 ProbSolv - All Rights Reserved</p>
-  </footer>
+      <!-- reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="6LeUcK4pAAAAAI9zU12wQaTQw79DhOoWnBkf3wOQ"></div>
+      <br>
+
+      <button type="submit">Send Message</button>
+      <p id="responseMsg"></p>
+    </form>
+  </div>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const responseMsg = document.getElementById('responseMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      fetch("https://formsubmit.co/ajax/sameer@probsolv.online", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+          "g-recaptcha-response": grecaptcha.getResponse()
+        })
+      })
+      .then(response => response.ok ? response.json() : Promise.reject(response))
+      .then(data => {
+        responseMsg.textContent = "✅ Thank you! Your message has been sent.";
+        responseMsg.style.color = "green";
+        form.reset();
+        grecaptcha.reset();
+      })
+      .catch(error => {
+        responseMsg.textContent = "❌ Something went wrong. Please try again.";
+        responseMsg.style.color = "red";
+      });
+    });
+  </script>
+
 </body>
 </html>
