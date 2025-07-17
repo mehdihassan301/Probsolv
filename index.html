@@ -3,60 +3,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ProbSolv - Smart digital solutions for AI education, WhatsApp business stores, QR storytelling, and more." />
-  <title>ProbSolv | Smart Solutions</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProbSolv - Smart Solutions Lab</title>
+  <meta name="description" content="ProbSolv offers AI-powered education, QR storytelling, WhatsApp stores, and more. Helping Sindh and Pakistan grow through digital solutions.">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3T7D7FQX6L');
+  </script>
+
+  <!-- Trustpilot Widget Script -->
+  <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    header {
+      background-color: #161b22;
+      color: #f0f6fc;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0d1117;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      border-top: 1px solid #30363d;
+      border-bottom: 1px solid #30363d;
+    }
+    nav a {
+      color: #c9d1d9;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a.active {
+      color: #58a6ff;
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+      border: 1px solid #30363d;
+    }
+    .cta {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .cta a {
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .cta a.facebook {
+      background-color: #3b5998;
+    }
+    .cta a.instagram {
+      background-color: #e4405f;
+    }
+    .cta a.youtube {
+      background-color: #ff0000;
+    }
+    .trustpilot-widget {
+      margin-top: 50px;
+    }
+    footer {
+      background-color: #161b22;
+      color: #8b949e;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 1px solid #30363d;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <h1>Welcome to ProbSolv</h1>
-    <p>We build smarter systems for the next generation in Sindh & beyond 🚀</p>
+    <h1>ProbSolv</h1>
+    <p>Smart AI-Powered Solutions for Your Local Needs</p>
   </header>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>AI Education Labs (AI LearnPad)</li>
-      <li>WhatsApp Business Store Builder</li>
-      <li>QR Storytelling for Shops</li>
-      <li>Voice-to-Text Assistant for Elders</li>
-      <li>Digital Wasiat Safeguard</li>
-      <li>Mini Surveillance Setup</li>
-    </ul>
-  </section>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <!-- Trustpilot Widget -->
-  <section id="reviews" style="margin-top: 40px;">
-    <h2>What People Say About Us</h2>
+  <section>
+    <h2>Welcome to ProbSolv</h2>
+    <p>We help solve daily problems using technology — from AI education to QR storytelling.</p>
 
-    <!-- TrustBox widget - Review Collector -->
+    <div class="services">
+      <div class="card">
+        <h3>AI Education Lab</h3>
+        <p>Teach students AI tools (ChatGPT, Grammarly, Canva) with local language guides.</p>
+      </div>
+      <div class="card">
+        <h3>WhatsApp Store Setup</h3>
+        <p>Build WhatsApp-based product menus and teach shopkeepers to share them.</p>
+      </div>
+      <div class="card">
+        <h3>QR Storytelling</h3>
+        <p>Showcase shop/business stories via scannable QR video banners.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Wasiat</h3>
+        <p>Create secure, fillable Urdu forms for will, family instructions, and asset lists.</p>
+      </div>
+      <div class="card">
+        <h3>Awaz Form</h3>
+        <p>Convert elderly voice notes into digital forms for utilities and pensions.</p>
+      </div>
+      <div class="card">
+        <h3>MiniCam Surveillance</h3>
+        <p>Install budget security camera kits in shops with alerts and live viewing.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://wa.me/923272583013" target="_blank">📱 WhatsApp</a>
+      <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="facebook">🌐 Facebook</a>
+      <a href="https://www.instagram.com/probsolv.pk?igsh=ZGUzMzM3NWJiOQ==" target="_blank" class="instagram">📸 Instagram</a>
+      <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank" class="youtube">▶️ YouTube</a>
+    </div>
+
+    <!-- Trustpilot Review Collector Widget -->
     <div class="trustpilot-widget"
-         data-locale="en-US"
-         data-template-id="56278e9abfbbba0bdcd568bc"
-         data-businessunit-id="687892f3c258ef140392aafc"
-         data-style-height="52px"
-         data-style-width="100%">
+      data-locale="en-US"
+      data-template-id="56278e9abfbbba0bdcd568bc"
+      data-businessunit-id="687892f3c258ef140392aafc"
+      data-style-height="52px"
+      data-style-width="100%">
       <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" rel="noopener">Trustpilot</a>
     </div>
     <!-- End TrustBox widget -->
-    
-    <!-- Trustpilot script -->
-    <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
   </section>
 
-  <!-- Contact Section -->
-  <footer style="margin-top: 60px;">
-    <p>Contact: <a href="mailto:sameer@probsolv.online">sameer@probsolv.online</a> | WhatsApp: <a href="https://wa.me/923272583013" target="_blank">Click to Chat</a></p>
-    <p>© 2025 ProbSolv. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
-
+  <footer>
+    <p>&copy; 2025 ProbSolv - All Rights Reserved</p>
   </footer>
 </body>
 </html>
