@@ -8,7 +8,7 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Animate on Scroll CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -21,36 +21,28 @@
       gtag('js', new Date());
       gtag('config', 'G-3T7D7FQX6L');
     </script>
-
-    <style>
-      .dark-mode {
-        background-color: #0f172a;
-        color: #f8fafc;
-      }
-    </style>
   </head>
 
   <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
     <!-- Navbar -->
     <header class="flex justify-between items-center p-5 bg-gray-100 dark:bg-gray-800">
       <h1 class="text-2xl font-bold">ProbSolv</h1>
-      <div class="flex items-center gap-4">
-        <button onclick="toggleDarkMode()" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
-          Toggle Dark Mode
-        </button>
+      <nav class="flex gap-6">
+        <a href="#hero" class="hover:text-blue-600">Home</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#about" class="hover:text-blue-600">About Us</a>
         <a href="https://wa.me/923272583013" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">WhatsApp Help</a>
-      </div>
+      </nav>
     </header>
 
     <!-- Hero -->
-    <section class="text-center py-10" data-aos="fade-up">
+    <section id="hero" class="text-center py-10" data-aos="fade-up">
       <h2 class="text-4xl font-bold mb-4">AI-Powered Services for Everyone</h2>
       <p class="text-lg text-gray-600 dark:text-gray-300">From education to design, we offer smart digital solutions tailored to your needs.</p>
     </section>
 
     <!-- Services Section -->
-    <section class="px-5 py-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up">
-      <!-- Service Card -->
+    <section id="services" class="px-5 py-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up">
       <div class="p-5 border rounded-lg bg-white dark:bg-gray-800 shadow-md">
         <h3 class="text-xl font-semibold mb-2">Education Setup</h3>
         <p class="text-sm mb-2">Train students using ChatGPT, Canva, Grammarly & more in Urdu/Sindhi.</p>
@@ -68,15 +60,23 @@
       </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="px-5 py-10 bg-gray-50 dark:bg-gray-700" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">About Us</h2>
+      <p class="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        ProbSolv is a locally rooted digital solutions company empowering individuals, students, and businesses with smart, accessible, and affordable services using AI and automation tools. We focus on value-driven results, community learning, and Urdu/Sindhi-first support.
+      </p>
+    </section>
+
     <!-- Testimonials -->
-    <section class="px-5 py-10 bg-gray-50 dark:bg-gray-700" data-aos="fade-up">
+    <section class="px-5 py-10 bg-white dark:bg-gray-800" data-aos="fade-up">
       <h2 class="text-2xl font-bold mb-6 text-center">Customer Testimonials</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded shadow">
           <p>“Best digital service in Sindh! Very affordable & quick.”</p>
           <p class="mt-2 text-sm font-semibold text-right">— Abdul Rehman</p>
         </div>
-        <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded shadow">
           <p>“Loved the education setup. Our students now use AI confidently.”</p>
           <p class="mt-2 text-sm font-semibold text-right">— Fatima Shah</p>
         </div>
@@ -121,11 +121,6 @@
     </footer>
 
     <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle('dark');
-        document.documentElement.classList.toggle('dark');
-      }
-
       AOS.init({ once: true });
     </script>
   </body>
