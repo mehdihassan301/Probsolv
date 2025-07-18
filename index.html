@@ -2,27 +2,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ProbSolv - Smart Solutions Lab</title>
-  <meta name="description" content="ProbSolv offers AI-powered education, QR storytelling, WhatsApp stores, and more. Helping Sindh and Pakistan grow through digital solutions.">
-  <meta name="keywords" content="AI Education, QR Storytelling, Digital Wasiat, WhatsApp Store, MiniCam Surveillance, Sukkur, ProbSolv, Pakistan, CV Design">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProbSolv - Smart Digital Solutions for AI Tools, QR Storytelling, CV Designing, and more">
+  <meta name="keywords" content="AI Education, QR Storytelling, CV Designing, Digital Services, ProbSolv, Sukkur, Pakistan, WhatsApp Business, Mini Surveillance">
   <meta name="author" content="ProbSolv Team">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+  <title>ProbSolv - Smart Digital Solutions</title>
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXRC23KMCD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-3T7D7FQX6L');
+    gtag('config', 'G-CXRC23KMCD');
   </script>
 
-  <!-- Trustpilot Widget Script -->
-  <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebc59;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Tawk.to Live Chat -->
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/923272583013" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp fa-lg"></i>
+  </a>
+
+  <!-- Header -->
+  <header class="hero-bg text-white py-20 px-6 text-center">
+    <h1 class="text-4xl font-bold mb-4">Welcome to ProbSolv</h1>
+    <p class="text-lg">Smart Digital Services for Entrepreneurs, Students & Businesses</p>
+    <div class="mt-6 flex justify-center space-x-4">
+      <a href="#services" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full">Explore Services</a>
+      <a href="https://wa.me/923272583013" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full">Chat on WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- Video Header -->
+  <section class="w-full">
+    <video autoplay muted loop class="w-full max-h-[400px] object-cover">
+      <source src="ai-tools-preview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-12 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold text-center mb-10">Our Services</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Sample Service Card -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">AI Education Setup</h3>
+        <p class="mb-4">Smart AI Labs & LearnPads for Schools and Students.</p>
+        <a href="services.html#ai-education" class="text-blue-600 font-semibold hover:underline">Learn more →</a>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">QR Storytelling</h3>
+        <p class="mb-4">Bring your brand to life with interactive QR-based narratives.</p>
+        <a href="services.html#qr-story" class="text-blue-600 font-semibold hover:underline">Learn more →</a>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">CV & Flyer Designing</h3>
+        <p class="mb-4">Professional resumes and flyers, delivered within minutes.</p>
+        <a href="services.html#cv-design" class="text-blue-600 font-semibold hover:underline">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-12 bg-gray-100 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-10">What People Say</h2>
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p>“ProbSolv helped my shop become discoverable online within a day!”</p>
+        <p class="mt-4 text-sm text-gray-600">– Aftab, Sukkur</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p>“Quick CV service, helpful team, and clean design. Highly recommended.”</p>
+        <p class="mt-4 text-sm text-gray-600">– Sania, Hyderabad</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- ... (your existing head content remains unchanged) ... -->
+
+<!-- Trustpilot Widget -->
+<section class="text-center py-8">
+  <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="687892f3c258ef140392aafc" data-style-height="52px" data-style-width="100%">
+    <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" rel="noopener">Trustpilot</a>
+  </div>
+</section>
+
+<!-- ✅ FAQ Section -->
+<section id="faq" class="py-12 bg-white px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-semibold text-center mb-10">Frequently Asked Questions</h2>
+  <div class="space-y-6">
+    <div class="bg-gray-50 p-5 rounded shadow">
+      <h3 class="font-bold text-lg mb-2">Q: How will I receive my service?</h3>
+      <p>A: All services are delivered via WhatsApp or Google Drive with simple Urdu/Sindhi guides.</p>
+    </div>
+    <div class="bg-gray-50 p-5 rounded shadow">
+      <h3 class="font-bold text-lg mb-2">Q: Do I need technical skills?</h3>
+      <p>A: Not at all. Our services are designed for beginners with complete support.</p>
+    </div>
+    <div class="bg-gray-50 p-5 rounded shadow">
+      <h3 class="font-bold text-lg mb-2">Q: Can I resell ProbSolv services?</h3>
+      <p>A: Yes! We welcome micro-entrepreneurs to promote services locally as resellers.</p>
+    </div>
+    <div class="bg-gray-50 p-5 rounded shadow">
+      <h3 class="font-bold text-lg mb-2">Q: How fast is delivery?</h3>
+      <p>A: Most services are delivered within 1–2 hours after order confirmation via WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6 text-center">
+  <p class="text-sm">&copy; 2025 ProbSolv - Powered by Smart Digital Labs</p>
+  <p class="text-xs">Email: mehdi@probsolv.online | WhatsApp: +923272583013</p>
+</footer>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p class="text-sm">&copy; 2025 ProbSolv - Powered by Smart Digital Labs</p>
+    <p class="text-xs">Email: mehdi@probsolv.online | WhatsApp: +923272583013</p>
+  </footer>
+
+  <!-- Live Chat Script (Tawk.to) -->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -35,184 +174,10 @@
     })();
   </script>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-    }
-    header {
-      background-color: #161b22;
-      color: #f0f6fc;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #0d1117;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      border-top: 1px solid #30363d;
-      border-bottom: 1px solid #30363d;
-    }
-    nav a {
-      color: #c9d1d9;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a.active {
-      color: #58a6ff;
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .card {
-      background: #161b22;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
-      border: 1px solid #30363d;
-    }
-    .cta {
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .cta a {
-      background-color: #25d366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    .cta a.facebook { background-color: #3b5998; }
-    .cta a.instagram { background-color: #e4405f; }
-    .cta a.youtube { background-color: #ff0000; }
-
-    .trustpilot-widget {
-      margin-top: 50px;
-    }
-
-    .faq, .pricing {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .faq h3, .pricing h3 {
-      margin-top: 20px;
-    }
-
-    footer {
-      background-color: #161b22;
-      color: #8b949e;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 1px solid #30363d;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>ProbSolv</h1>
-    <p>Smart AI-Powered Solutions for Your Local Needs</p>
-  </header>
-
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <section>
-    <h2>Welcome to ProbSolv</h2>
-    <p>We help solve daily problems using technology — from AI education to QR storytelling.</p>
-
-    <div class="services">
-      <div class="card">
-        <h3>AI Education Lab</h3>
-        <p>Teach students AI tools (ChatGPT, Grammarly, Canva) with local language guides.</p>
-      </div>
-      <div class="card">
-        <h3>WhatsApp Store Setup</h3>
-        <p>Build WhatsApp-based product menus and teach shopkeepers to share them.</p>
-      </div>
-      <div class="card">
-        <h3>QR Storytelling</h3>
-        <p>Showcase shop/business stories via scannable QR video banners.</p>
-      </div>
-      <div class="card">
-        <h3>Digital Wasiat</h3>
-        <p>Create secure, fillable Urdu forms for will, family instructions, and asset lists.</p>
-      </div>
-      <div class="card">
-        <h3>Awaz Form</h3>
-        <p>Convert elderly voice notes into digital forms for utilities and pensions.</p>
-      </div>
-      <div class="card">
-        <h3>MiniCam Surveillance</h3>
-        <p>Install budget security camera kits in shops with alerts and live viewing.</p>
-      </div>
-    </div>
-
-    <div class="cta">
-      <a href="https://wa.me/923272583013" target="_blank">📱 WhatsApp</a>
-      <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="facebook">🌐 Facebook</a>
-      <a href="https://www.instagram.com/probsolv.online?igsh=ZGUzMzM3NWJiOQ==" target="_blank" class="instagram">📸 Instagram</a>
-      <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank" class="youtube">▶️ YouTube</a>
-    </div>
-
-    <!-- Trustpilot Review Collector Widget -->
-    <div class="trustpilot-widget"
-      data-locale="en-US"
-      data-template-id="56278e9abfbbba0bdcd568bc"
-      data-businessunit-id="687892f3c258ef140392aafc"
-      data-style-height="52px"
-      data-style-width="100%">
-      <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" rel="noopener">Trustpilot</a>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <h3>What is ProbSolv?</h3>
-    <p>We provide digital services for education, businesses, and communities using smart tools and local solutions.</p>
-    <h3>Is ProbSolv for rural or urban customers?</h3>
-    <p>Both! We work with schools, shops, students, and freelancers from any area.</p>
-    <h3>How can I get started?</h3>
-    <p>Click on the WhatsApp link above to chat with our team instantly.</p>
-  </section>
-
-  <!-- Pricing Section -->
-  <section class="pricing">
-    <h2>Pricing</h2>
-    <h3>AI Education Setup</h3>
-    <p>Rs. 2,000 - Rs. 8,000 depending on school type</p>
-    <h3>QR Storytelling</h3>
-    <p>Rs. 3,000 per banner + video production</p>
-    <h3>WhatsApp Store</h3>
-    <p>Rs. 1,500 one-time setup</p>
-    <h3>CV & Flyer Design</h3>
-    <p>Rs. 500 per design (ready in 1 day)</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 ProbSolv - All Rights Reserved</p>
-  </footer>
 </body>
 </html>
+
+
+
+
 
