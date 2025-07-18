@@ -4,140 +4,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProbSolv - Smart Solutions Lab</title>
+  <title>ProbSolv - Smart AI Solutions</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; }
-    .btn-main { @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition; }
-    .section-title { @apply text-3xl font-bold text-blue-800 mb-4; }
-  </style>
+  <meta name="description" content="ProbSolv offers AI-powered education, digital stores, CV design, and more for students and businesses in Pakistan.">
+  <meta name="keywords" content="AI Education, Digital Store, CV Design, WhatsApp Business, ProbSolv, Pakistan, Sindh">
+  <meta name="author" content="ProbSolv">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-3T7D7FQX6L');
   </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Side Navigation -->
+  <div class="fixed top-1/4 left-0 z-50 hidden sm:flex flex-col space-y-4 pl-2">
+    <a href="#services" class="text-blue-600 hover:underline">Services</a>
+    <a href="#testimonials" class="text-blue-600 hover:underline">Testimonials</a>
+    <a href="#faq" class="text-blue-600 hover:underline">FAQs</a>
+    <a href="#about" class="text-blue-600 hover:underline">About</a>
+  </div>
+
   <!-- Header -->
-  <header class="bg-white shadow-md p-4 sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-700">ProbSolv</h1>
-      <nav>
-        <ul class="flex gap-6 text-sm font-medium">
-          <li><a href="#services" class="hover:text-blue-600">Services</a></li>
-          <li><a href="#testimonials" class="hover:text-blue-600">Testimonials</a></li>
-          <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="text-center py-10 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+    <h1 class="text-4xl font-bold">ProbSolv - Smart AI Solutions</h1>
+    <p class="mt-2">Empowering education & business through AI in Pakistan</p>
   </header>
 
-  <!-- Hero -->
-  <section class="bg-blue-50 py-16" id="home" data-aos="fade-in">
-    <div class="container mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold text-blue-800 mb-4">AI-Powered Smart Solutions for Pakistan</h2>
-      <p class="text-lg text-gray-600 mb-6">ProbSolv makes technology accessible for students, businesses & startups using AI & automation.</p>
-      <a href="#services" class="btn-main">Explore Our Services</a>
-    </div>
-  </section>
- <!-- Services -->
-  <section class="py-16 bg-white" id="services" data-aos="fade-up">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="section-title">Our Smart Services</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-        <div class="bg-gray-50 p-6 rounded shadow" data-aos="zoom-in">
-          <img src="images/ai-education.png" alt="AI Education" class="h-24 mx-auto mb-4">
-          <h4 class="font-semibold text-lg mb-2">AI Lab for Students</h4>
-          <p class="text-sm text-gray-600">AI tools + training for schools & students to boost digital literacy.</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded shadow" data-aos="zoom-in">
-          <img src="images/digital-store.png" alt="WhatsApp Catalog" class="h-24 mx-auto mb-4">
-          <h4 class="font-semibold text-lg mb-2">WhatsApp Digital Store</h4>
-          <p class="text-sm text-gray-600">Turn your shop into an online store with WhatsApp catalog in minutes.</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded shadow" data-aos="zoom-in">
-          <img src="images/cv-design.png" alt="CV Design" class="h-24 mx-auto mb-4">
-          <h4 class="font-semibold text-lg mb-2">Professional CV Design</h4>
-          <p class="text-sm text-gray-600">Modern, ATS-friendly CV designs with quick delivery in PDF or print-ready format.</p>
-        </div>
+  <!-- Services Section -->
+  <section id="services" class="py-10 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-8">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- AI Education Setup -->
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+        <img src="images/education.png" alt="AI Education Setup" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">AI Education Setup</h3>
+        <p class="text-sm">Train students using ChatGPT, Grammarly, Canva & more in Urdu/Sindhi.</p>
+        <p class="mt-2 font-bold">PKR 499</p>
       </div>
+
+      <!-- WhatsApp Business Store -->
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+        <img src="images/store.png" alt="WhatsApp Store Setup" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">WhatsApp Store Setup</h3>
+        <p class="text-sm">Get complete WhatsApp-based store with catalog, buttons, and Urdu/Sindhi setup.</p>
+        <p class="mt-2 font-bold">PKR 899</p>
+      </div>
+
+      <!-- CV Design -->
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+        <img src="images/cvdesign.png" alt="CV Designing" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">CV Designing</h3>
+        <p class="text-sm">Professional CVs in PDF or DOC formats in English or Urdu.</p>
+        <p class="mt-2 font-bold">PKR 249</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="py-16 bg-blue-50" id="testimonials" data-aos="fade-up">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="section-title">What People Say</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-        <div class="bg-white p-6 rounded shadow text-left">
-          <p class="text-gray-700 italic">“ProbSolv helped our tuition center set up a full WhatsApp order system in just 1 day. Incredible service!”</p>
-          <p class="text-sm mt-3 font-semibold text-blue-600">– Ahsan Mughal, Sukkur</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow text-left">
-          <p class="text-gray-700 italic">“I got my CV designed and printed for a job interview same day. Fast, neat, and professional!”</p>
-          <p class="text-sm mt-3 font-semibold text-blue-600">– Sana Fatima, Khairpur</p>
-        </div>
-      </div>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-10 px-6 bg-white">
+    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-8">What People Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <blockquote class="bg-gray-100 p-4 rounded">
+        <p>"ProbSolv helped our school implement AI tools without any technical issues. Highly recommended!"</p>
+        <footer class="mt-2 text-sm font-bold">— Mr. Iqbal, School Principal</footer>
+      </blockquote>
+      <blockquote class="bg-gray-100 p-4 rounded">
+        <p>"Thanks to their digital dukaan setup, we’re now handling orders on WhatsApp easily!"</p>
+        <footer class="mt-2 text-sm font-bold">— Ayesha, Shop Owner</footer>
+      </blockquote>
     </div>
   </section>
 
-  <!-- Trustpilot Static -->
-  <section class="py-8 bg-white" data-aos="fade-up">
-    <div class="container mx-auto text-center">
-      <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" rel="noopener noreferrer"
-         class="inline-block bg-green-500 text-white font-semibold px-6 py-2 rounded hover:bg-green-600 transition">
-        ★ Leave a Review on Trustpilot
-      </a>
+  <!-- FAQ Section -->
+  <section id="faq" class="py-10 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-8">FAQs</h2>
+    <div class="space-y-4 max-w-3xl mx-auto">
+
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-semibold">Do you offer services in Urdu or Sindhi?</summary>
+        <p class="mt-2">Yes, all services are available in Urdu and Sindhi based on your preference.</p>
+      </details>
+
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-semibold">How do I place an order?</summary>
+        <p class="mt-2">You can contact us via WhatsApp or click the buttons provided under each service.</p>
+      </details>
+
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-semibold">What is the delivery time?</summary>
+        <p class="mt-2">Most digital services are delivered within 1–2 hours.</p>
+      </details>
+
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-16 bg-gray-100" id="faq" data-aos="fade-up">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="section-title">FAQs</h3>
-      <div class="mt-8 text-left max-w-3xl mx-auto">
-        <div class="mb-6">
-          <h4 class="font-semibold text-lg text-blue-700">What is ProbSolv?</h4>
-          <p class="text-gray-600">ProbSolv is a smart tech service helping local businesses, students, and professionals use AI, design, and automation effectively.</p>
-        </div>
-        <div class="mb-6">
-          <h4 class="font-semibold text-lg text-blue-700">Do you provide physical delivery?</h4>
-          <p class="text-gray-600">Yes, in select areas of Sindh, we coordinate with printing shops for same-day delivery.</p>
-        </div>
-        <div class="mb-6">
-          <h4 class="font-semibold text-lg text-blue-700">How can I place an order?</h4>
-          <p class="text-gray-600">Just message us on WhatsApp using the green icon below or visit our Instagram page for service demos.</p>
-        </div>
-      </div>
-    </div>
+  <!-- About Us -->
+  <section id="about" class="py-10 px-6 bg-white">
+    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-8">About ProbSolv</h2>
+    <p class="max-w-3xl mx-auto text-center">
+      ProbSolv is a youth-led startup based in Pakistan aiming to make AI education, digital stores, and smart solutions accessible to local businesses, students, and entrepreneurs—without needing any technical background.
+    </p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-800 text-white py-6" id="contact">
-    <div class="container mx-auto px-4 text-center">
-      <h3 class="text-xl font-semibold mb-3">Connect with ProbSolv</h3>
-      <div class="flex justify-center gap-6 mb-4">
-        <a href="https://instagram.com/probsolv.pk" target="_blank" class="hover:underline">Instagram</a>
-        <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="hover:underline">Facebook</a>
-        <a href="https://youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank" class="hover:underline">YouTube</a>
-      </div>
-      <p class="text-sm">&copy; 2025 ProbSolv. All rights reserved.</p>
+  <footer class="bg-gray-800 text-white py-6 px-4 text-center mt-8">
+    <div class="mb-4">
+      <a href="https://facebook.com/probsolv.pk" class="mx-2 hover:underline">Facebook</a>
+      <a href="https://instagram.com/probsolv.pk" class="mx-2 hover:underline">Instagram</a>
+      <a href="https://www.youtube.com/@probsolv" class="mx-2 hover:underline">YouTube</a>
     </div>
-    <!-- WhatsApp Chat Button -->
-    <a href="https://wa.me/923272583013" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">
-      <svg class="w-6 h-6 fill-current" viewBox="0 0 32 32"><path d="M19.11 17.15c-.32-.16-1.91-.94-2.2-1.05-.29-.11-.5-.16-.71.16s-.82 1.05-1 1.27c-.18.21-.36.24-.68.08s-1.32-.49-2.51-1.57c-.93-.82-1.56-1.83-1.74-2.13-.18-.29-.02-.45.14-.6.14-.13.32-.34.48-.51.16-.18.21-.29.32-.49.11-.21.05-.39-.02-.54-.08-.16-.71-1.71-.97-2.35-.26-.63-.53-.55-.71-.56h-.6c-.21 0-.54.08-.82.39-.28.29-1.08 1.06-1.08 2.56s1.11 2.97 1.26 3.17c.16.21 2.17 3.32 5.26 4.66.74.32 1.32.51 1.77.65.74.24 1.42.21 1.95.13.59-.08 1.91-.78 2.18-1.53.27-.74.27-1.37.19-1.53-.08-.16-.29-.24-.6-.39z"/></svg>
-    </a>
+
+    <!-- Trustpilot Button -->
+    <div class="mt-4">
+      <a href="https://www.trustpilot.com/review/probsolv.online" class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+        Review us on Trustpilot
+      </a>
+    </div>
+
+    <p class="text-sm mt-4">© 2025 ProbSolv. All rights reserved.</p>
   </footer>
 
-  <script>
-    AOS.init();
-  </script>
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/923272583013" class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 z-50">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+      <path d="M20.5 3.5A11.45 11.45 0 0 0 12 1C6.5 1 2 5.5 2 11a9.7 9.7 0 0 0 1.5 5.5L2 23l6.5-1.5A10.86 10.86 0 0 0 12 21c5.5 0 10-4.5 10-10 0-2.5-.9-4.8-2.5-6.5zM12 19c-1.5 0-3-.4-4.2-1.2L6 18l.6-1.8C5.4 15 5 13.5 5 12c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7z"/>
+    </svg>
+  </a>
+
 </body>
 </html>
