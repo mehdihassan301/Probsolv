@@ -1,127 +1,127 @@
 <!-- Trigger redeploy -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProbSolv - Smart AI-Powered Solutions</title>
-
-  <!-- SEO -->
-  <meta name="description" content="ProbSolv - AI-powered digital services like education setup, WhatsApp business stores, and more for schools and entrepreneurs in Pakistan.">
-  <meta name="keywords" content="AI Education, WhatsApp Store Setup, Digital Dukaan, ChatGPT Schools, Sindh Business Digital">
-  <meta name="author" content="Sameer Hassan - ProbSolv">
-
-  <!-- Favicon -->
+  <title>ProbSolv - Smart AI Solutions</title>
+  <meta name="description" content="ProbSolv offers AI-powered education setup, digital shop systems, and instant design tools to modernize your business or school." />
   <link rel="icon" href="favicon.ico" />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-3T7D7FQX6L');
   </script>
-</head>
-<body class="bg-gray-50 text-gray-800">
 
+  <!-- Tailwind Dark Mode Toggle -->
+  <script>
+    function toggleDark() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
   <!-- Header -->
-  <header class="bg-white shadow p-5 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-blue-600">ProbSolv</h1>
-    <nav class="space-x-4">
-      <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
-      <a href="#faq" class="text-gray-600 hover:text-blue-600">FAQs</a>
-      <a href="https://wa.me/923272583013" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded">WhatsApp Help</a>
-    </nav>
+  <header class="text-center p-6 bg-gray-100 dark:bg-gray-800">
+    <h1 class="text-4xl font-bold">ProbSolv - Smart Solutions Lab</h1>
+    <p class="text-sm mt-2">Modern AI tools to grow your education and business</p>
+    <button onclick="toggleDark()" class="mt-4 px-4 py-2 bg-black text-white rounded hover:bg-gray-700">Toggle Dark Mode</button>
   </header>
 
-  <!-- Hero -->
-  <section class="text-center py-16 bg-gradient-to-br from-blue-100 to-white">
-    <h2 class="text-4xl font-bold mb-4">AI Tools. Real Solutions.</h2>
-    <p class="text-lg mb-6 max-w-xl mx-auto">We help schools, startups, and shops use AI the smart way—simple, fast, and localized in Urdu/Sindhi.</p>
-    <a href="#services" class="bg-blue-600 text-white px-6 py-3 rounded font-semibold">Explore Services</a>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-16 px-4 bg-white">
-    <h3 class="text-3xl font-bold text-center mb-10">Our Smart Services</h3>
-    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-      
-      <!-- Service 1 -->
-      <div class="bg-gray-100 p-6 rounded shadow">
-        <h4 class="text-xl font-semibold">1. AI Education Setup</h4>
-        <p class="text-sm text-gray-600 mt-2">Train students using ChatGPT, Grammarly, Canva & more. Localized guides in Urdu/Sindhi. Includes school mgmt templates.</p>
-        <p class="font-bold mt-2 text-green-600">PKR 499.00</p>
+  <!-- Services Section -->
+  <section id="services" class="p-8">
+    <h2 class="text-3xl font-semibold mb-4">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Education Setup -->
+      <div class="p-5 border rounded-lg shadow dark:bg-gray-800">
+        <h3 class="text-xl font-bold">Education AI Setup - PKR 799</h3>
+        <p class="mt-2">Train students using ChatGPT, Grammarly, Canva & more. Includes Urdu/Sindhi guides and school templates.</p>
       </div>
-
-      <!-- Service 2 -->
-      <div class="bg-gray-100 p-6 rounded shadow">
-        <h4 class="text-xl font-semibold">2. WhatsApp Business Store Setup (Digital Dukaan)</h4>
-        <p class="text-sm text-gray-600 mt-2">Complete WhatsApp store: product catalog, contact/payment buttons & FB integration. Urdu/Sindhi included.</p>
-        <p class="font-bold mt-2 text-green-600">PKR 899.00</p>
+      <!-- Digital Dukaan -->
+      <div class="p-5 border rounded-lg shadow dark:bg-gray-800">
+        <h3 class="text-xl font-bold">WhatsApp Business Store Setup - PKR 499</h3>
+        <p class="mt-2">Complete WhatsApp store setup with catalog, contact/payment buttons, and FB integration.</p>
       </div>
-
-      <!-- Add more services here as needed -->
+      <!-- CV Designing -->
+      <div class="p-5 border rounded-lg shadow dark:bg-gray-800">
+        <h3 class="text-xl font-bold">CV Designing Service - PKR 199</h3>
+        <p class="mt-2">Professional CV designs in PDF/Word, tailored for jobs or study abroad.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Trustpilot -->
-  <section class="py-10 text-center bg-gray-50">
-    <h4 class="text-xl font-bold mb-4">What Our Clients Say</h4>
-    <!-- TrustBox widget - Review Collector -->
-    <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="687892f3c258ef140392aafc" data-style-height="52px" data-style-width="100%">
-      <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" rel="noopener">Trustpilot</a>
+  <!-- FAQ Section -->
+  <section id="faq" class="p-8 bg-gray-50 dark:bg-gray-800">
+    <h2 class="text-3xl font-semibold mb-4">FAQs</h2>
+    <div class="space-y-4">
+      <details class="p-4 border rounded-lg">
+        <summary class="cursor-pointer font-semibold">How do I place an order?</summary>
+        <p class="mt-2">Simply message us via WhatsApp or submit the contact form on this site.</p>
+      </details>
+      <details class="p-4 border rounded-lg">
+        <summary class="cursor-pointer font-semibold">Can I pay via JazzCash or Easypaisa?</summary>
+        <p class="mt-2">Yes, we accept both.</p>
+      </details>
+      <details class="p-4 border rounded-lg">
+        <summary class="cursor-pointer font-semibold">How quickly will I get my service?</summary>
+        <p class="mt-2">Within 10-30 minutes depending on the task.</p>
+      </details>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section class="bg-white py-16 px-4">
-    <h3 class="text-2xl font-bold text-center mb-6">Testimonials</h3>
-    <div class="max-w-4xl mx-auto text-center space-y-6">
-      <blockquote class="italic text-gray-700">"ProbSolv helped digitize my school with AI tools and now students love using tech!"</blockquote>
-      <blockquote class="italic text-gray-700">"Their WhatsApp store setup made selling local products super easy."</blockquote>
+  <section class="p-8">
+    <h2 class="text-3xl font-semibold mb-4">What Our Clients Say</h2>
+    <div class="grid gap-4 md:grid-cols-2">
+      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+        <p>“ProbSolv helped set up our school AI lab — students love it!”</p>
+        <p class="text-sm text-gray-500">- Ahmed Raza</p>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+        <p>“Got my WhatsApp store running in 1 hour. Excellent support.”</p>
+        <p class="text-sm text-gray-500">- Sadia Malik</p>
+      </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="bg-gray-100 py-16 px-4">
-    <h3 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h3>
-    <div class="max-w-3xl mx-auto space-y-4">
-      <details class="bg-white p-4 rounded shadow">
-        <summary class="font-semibold cursor-pointer">What is ProbSolv?</summary>
-        <p class="text-gray-700 mt-2">ProbSolv is a smart AI-based service lab that offers digital solutions like education training, store setup & automation tools.</p>
-      </details>
-      <details class="bg-white p-4 rounded shadow">
-        <summary class="font-semibold cursor-pointer">Is your service available in Urdu/Sindhi?</summary>
-        <p class="text-gray-700 mt-2">Yes, we provide guides and tools in both Urdu and Sindhi for local ease.</p>
-      </details>
-      <details class="bg-white p-4 rounded shadow">
-        <summary class="font-semibold cursor-pointer">How do I pay?</summary>
-        <p class="text-gray-700 mt-2">We accept local bank transfers, JazzCash, and WhatsApp-based payment confirmation.</p>
-      </details>
+  <!-- Trustpilot Widget Colored -->
+  <section class="p-8 text-center">
+    <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="687892f3c258ef140392aafc" data-style-height="52px" data-style-width="100%" style="background: #00b67a; color: white; border-radius: 8px;">
+      <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" rel="noopener" style="color:white;font-weight:bold;">🌟 Review Us on Trustpilot</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-6">
-    <p>&copy; 2025 ProbSolv. All rights reserved.</p>
-    <div class="mt-2 space-x-4">
-      <a href="https://www.instagram.com/probsolv.pk" target="_blank" class="hover:text-blue-400">Instagram</a>
-      <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank" class="hover:text-red-400">YouTube</a>
-      <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="hover:text-blue-400">Facebook</a>
-    </div>
-  </footer>
+  <!-- Contact Section -->
+  <section class="p-8" id="contact">
+    <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+    <form action="https://formsubmit.co/your@email.com" method="POST" class="space-y-4 max-w-lg mx-auto">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded" />
+      <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-2 border rounded" required></textarea>
+      <button type="submit" class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800">Send</button>
+    </form>
+  </section>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/923272583013" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg" target="_blank">
-    Chat on WhatsApp
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/923272583013" target="_blank" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50">
+    💬
   </a>
 
+  <!-- Footer -->
+  <footer class="text-center p-6 text-sm bg-gray-100 dark:bg-gray-800">
+    &copy; 2025 ProbSolv - Built with ❤️ in Pakistan. | <a href="https://www.instagram.com/probsolv.pk" target="_blank">Instagram</a> • <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank">Facebook</a> • <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank">YouTube</a>
+  </footer>
 </body>
 </html>
+
 
 
 
