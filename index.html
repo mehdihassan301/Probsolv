@@ -1,157 +1,130 @@
 <!-- Trigger redeploy -->
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ProbSolv - Smart Solutions Lab</title>
-  <meta name="description" content="ProbSolv offers smart digital services for education, businesses, and AI-based solutions.">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta name="description" content="ProbSolv - Your AI-powered digital solution lab for education, business, and design in Pakistan." />
+  <meta name="keywords" content="ProbSolv, AI services, Education with AI, WhatsApp Store, Digital Dukaan, Sukkur, Sindh, Smart Solutions" />
+  <meta name="author" content="Sameer Hassan" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-3T7D7FQX6L');
   </script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .dark body {
+      background-color: #0f172a;
+      color: #f1f5f9;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition duration-300">
+<body class="transition duration-500">
 
   <!-- Dark Mode Toggle -->
-  <div class="p-4 flex justify-end">
-    <button id="toggleDark" class="px-4 py-2 bg-gray-800 text-white rounded dark:bg-yellow-400 dark:text-black">Toggle Dark Mode</button>
+  <div class="fixed top-4 right-4 z-50">
+    <button onclick="toggleDarkMode()" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">
+      Toggle Dark Mode
+    </button>
   </div>
 
-  <!-- Hero Section -->
-  <section class="text-center py-10 px-4" data-aos="fade-up">
-    <h1 class="text-4xl font-bold">Welcome to ProbSolv</h1>
-    <p class="text-lg mt-2">Smart Digital Services for Education, Businesses & More</p>
-  </section>
+  <!-- Header -->
+  <header class="text-center py-8 bg-gradient-to-r from-indigo-500 to-blue-600 text-white" data-aos="fade-down">
+    <h1 class="text-4xl font-bold">ProbSolv - Smart AI Solutions</h1>
+    <p class="mt-2 text-lg">Empowering Pakistan with AI-powered tools and digital services</p>
+  </header>
 
-  <!-- Services Section -->
-  <section class="px-6 py-10 bg-gray-100 dark:bg-gray-800" data-aos="fade-up" id="services">
-    <h2 class="text-2xl font-semibold text-center mb-6">Our Services</h2>
-    <div class="grid md:grid-cols-2 gap-6">
+  <!-- Services -->
+  <section class="p-8 bg-white dark:bg-gray-900" data-aos="fade-up">
+    <h2 class="text-2xl font-bold mb-6 text-center">Our Services</h2>
 
-      <!-- Service Card -->
-      <div class="p-4 border rounded shadow dark:bg-gray-700">
-        <h3 class="text-xl font-bold">1. AI Education Setup</h3>
-        <p>Train students using ChatGPT, Canva & Grammarly. Includes localized guides and templates.</p>
-        <p class="mt-2 font-semibold text-green-500">PKR 499.00</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Education Setup -->
+      <div class="p-6 border rounded shadow-md bg-gray-50 dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-2">📚 AI Education Setup - PKR 499</h3>
+        <p>Train students using ChatGPT, Grammarly, Canva & more. Includes Urdu/Sindhi guides and school templates.</p>
       </div>
 
-      <!-- Service Card -->
-      <div class="p-4 border rounded shadow dark:bg-gray-700">
-        <h3 class="text-xl font-bold">2. WhatsApp Digital Dukaan</h3>
-        <p>Get a fully configured WhatsApp-based store. Catalog, contact buttons & FB integrated in local language.</p>
-        <p class="mt-2 font-semibold text-green-500">PKR 899.00</p>
+      <!-- WhatsApp Store -->
+      <div class="p-6 border rounded shadow-md bg-gray-50 dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-2">🛍️ WhatsApp Store Setup - PKR 899</h3>
+        <p>Full WhatsApp-based store setup with payment buttons, catalog, and FB integration (Urdu/Sindhi).</p>
       </div>
 
-      <!-- CV Designing -->
-      <div class="p-4 border rounded shadow dark:bg-gray-700">
-        <h3 class="text-xl font-bold">3. CV Designing</h3>
-        <p>Modern & professional CVs for jobs, freelancers & students. Get designs in PDF within 24 hours.</p>
-        <p class="mt-2 font-semibold text-green-500">PKR 299.00</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="px-6 py-10" data-aos="fade-up" id="faq">
-    <h2 class="text-2xl font-semibold text-center mb-6">FAQs</h2>
-    <div class="space-y-4">
-      <details class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
-        <summary class="cursor-pointer font-semibold">What is ProbSolv?</summary>
-        <p>ProbSolv is a digital solutions platform offering smart AI services, business tools & student resources.</p>
-      </details>
-      <details class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
-        <summary class="cursor-pointer font-semibold">Do I need to pay before the service?</summary>
-        <p>Yes, we work on advance payment to ensure service commitment.</p>
-      </details>
-      <details class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
-        <summary class="cursor-pointer font-semibold">How can I get support?</summary>
-        <p>You can WhatsApp us directly via the chat button or email us.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="px-6 py-10 bg-gray-50 dark:bg-gray-900" data-aos="fade-up" id="testimonials">
-    <h2 class="text-2xl font-semibold text-center mb-6">User Reviews</h2>
-    <div class="grid md:grid-cols-2 gap-4">
-      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-        <p>"Amazing service. Helped my school go digital with ease!"</p>
-        <p class="mt-2 font-bold text-right">- Ahmed Khan</p>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-        <p>"Got my CV designed same-day. Highly recommended!"</p>
-        <p class="mt-2 font-bold text-right">- Sara Shaikh</p>
+      <!-- CV Design -->
+      <div class="p-6 border rounded shadow-md bg-gray-50 dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-2">🧾 CV Designing Service - PKR 199</h3>
+        <p>Professional CV designs tailored in English & Urdu for job applications or study abroad.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="px-6 py-10" id="contact" data-aos="fade-up">
-    <h2 class="text-2xl font-semibold text-center mb-4">Contact Us</h2>
-    <form id="contactForm" class="max-w-xl mx-auto space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded dark:bg-gray-700" />
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded dark:bg-gray-700" />
-      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-2 border rounded dark:bg-gray-700"></textarea>
-      <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Send</button>
+  <!-- TrustPilot -->
+  <section class="text-center py-6 bg-gray-100 dark:bg-gray-900" data-aos="zoom-in">
+    <h2 class="text-xl font-semibold mb-2">Client Reviews</h2>
+    <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="687892f3c258ef140392aafc" data-style-height="52px" data-style-width="100%">
+      <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" rel="noopener" style="color:#fff; background-color:#00b67a; padding:10px 20px; border-radius:6px; display:inline-block; font-weight:bold;">
+        Review us on Trustpilot
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="p-8 bg-white dark:bg-gray-900" data-aos="fade-up">
+    <h2 class="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+    <form id="contactForm" class="max-w-lg mx-auto space-y-4" action="https://formsubmit.co/ajax/smartsameer015@gmail.com" method="POST" data-aos="zoom-in">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
+      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 border rounded"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send Message</button>
+      <p id="formResponse" class="text-green-600 mt-2 hidden">Thanks! We'll be in touch soon.</p>
     </form>
-    <p id="responseMsg" class="text-center mt-4 text-green-500 hidden">Message sent successfully!</p>
   </section>
 
-  <!-- Social Links with Icons -->
-  <footer class="py-6 bg-gray-100 dark:bg-gray-800 text-center">
-    <div class="flex justify-center space-x-6 text-2xl">
-      <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank"><i class="fab fa-youtube text-red-500"></i></a>
-      <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank"><i class="fab fa-facebook text-blue-600"></i></a>
-      <a href="https://www.instagram.com/probsolv.pk" target="_blank"><i class="fab fa-instagram text-pink-500"></i></a>
-      <a href="https://wa.me/923272583013" target="_blank"><i class="fab fa-whatsapp text-green-500"></i></a>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-6 mt-12" data-aos="fade-up">
+    <div class="text-center">
+      <p>© 2025 ProbSolv. Built with ❤️ in Pakistan</p>
+      <div class="mt-4 space-x-4">
+        <a href="https://facebook.com/profile.php?id=61578139677102" target="_blank" class="hover:underline">Facebook</a>
+        <a href="https://www.instagram.com/probsolv.pk" target="_blank" class="hover:underline">Instagram</a>
+        <a href="https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw" target="_blank" class="hover:underline">YouTube</a>
+        <a href="https://wa.me/923272583013" target="_blank" class="hover:underline">WhatsApp</a>
+      </div>
     </div>
-    <div class="mt-4">
-      <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" class="inline-block px-4 py-2 bg-green-500 text-white rounded">⭐ Rate us on Trustpilot</a>
-    </div>
-    <p class="mt-4 text-sm">&copy; 2025 ProbSolv | Smart Solutions Lab</p>
   </footer>
-
-  <!-- WhatsApp Chat Button -->
-  <a href="https://wa.me/923272583013" target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg">
-    <i class="fab fa-whatsapp"></i> Chat
-  </a>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <script>
-    AOS.init();
-
-    // Dark mode toggle
-    const toggleDark = document.getElementById('toggleDark');
-    toggleDark.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
-
-    // Contact form
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+    }
+    document.getElementById('contactForm')?.addEventListener("submit", async function (e) {
       e.preventDefault();
-      fetch("https://formsubmit.co/ajax/support@probsolv.online", {
+      const form = e.target;
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
         method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: this.name.value,
-          email: this.email.value,
-          message: this.message.value
-        })
-      })
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('responseMsg').classList.remove('hidden');
-        this.reset();
+        body: formData,
+        headers: { 'Accept': 'application/json' }
       });
+      if (response.ok) {
+        document.getElementById("formResponse").classList.remove("hidden");
+        form.reset();
+      }
     });
   </script>
 </body>
