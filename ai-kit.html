@@ -1,88 +1,118 @@
+<!-- Trigger redeploy -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProbSolv AI Education Kit</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProbSolv AI Education Kit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
 
-    <!-- Header -->
-    <header class="bg-blue-700 text-white py-6">
-      <div class="container mx-auto px-4">
-        <h1 class="text-3xl font-bold">ProbSolv AI Education Kit</h1>
-        <p class="text-lg mt-1">Empowering Future Minds with Artificial Intelligence</p>
+  <!-- Sidebar -->
+  <div class="flex">
+    <aside class="w-64 h-screen bg-[#1e293b] text-white fixed">
+      <div class="p-6 text-2xl font-bold border-b border-gray-600">
+        ProbSolv Kit
       </div>
-    </header>
+      <nav class="flex flex-col mt-4 space-y-3 px-4 text-base">
+        <a href="#home" class="hover:text-yellow-300">Home</a>
+        <a href="#about" class="hover:text-yellow-300">About</a>
+        <a href="#features" class="hover:text-yellow-300">Features</a>
+        <a href="#tools" class="hover:text-yellow-300">Tools</a>
+        <a href="#testimonials" class="hover:text-yellow-300">Testimonials</a>
+        <a href="#faq" class="hover:text-yellow-300">FAQs</a>
+        <a href="#contact" class="hover:text-yellow-300">Contact</a>
+      </nav>
+    </aside>
 
-    <!-- Hero Section -->
-    <section class="bg-white py-12">
-      <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 class="text-2xl font-bold mb-4">What is the AI Education Kit?</h2>
-          <p class="mb-4">
-            The AI Education Kit by ProbSolv is a ready-to-use solution for schools and colleges to launch modern, skill-based AI learning in classrooms. It is designed for Pakistani students and aligned with real-world tools and challenges.
-          </p>
-          <p class="mb-6 text-blue-700 font-semibold">
-            📘 Teach AI without needing expensive software or paid tools.
-          </p>
-          <a href="https://wa.me/923272583013" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 inline-block transition">Get Started</a>
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 px-6 py-10 space-y-20">
+
+      <!-- Home Preview -->
+      <section id="home" class="text-center">
+        <h1 class="text-4xl font-extrabold text-blue-900">AI Kit for Schools & Colleges</h1>
+        <p class="mt-4 text-gray-600">Empowering students with next-gen tools to learn, create and lead using AI. Developed by ProbSolv.</p>
+      </section>
+
+      <!-- About Preview -->
+      <section id="about">
+        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4">About the Kit</h2>
+        <p class="mt-2 text-gray-700">The ProbSolv AI Kit is designed to integrate Artificial Intelligence education into the classroom with ready-to-use templates, guides, and demos for teachers and students alike.</p>
+      </section>
+
+      <!-- Features Preview -->
+      <section id="features">
+        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4">Key Features</h2>
+        <ul class="mt-2 text-gray-700 list-disc list-inside">
+          <li>AI Introduction for Students</li>
+          <li>Teacher-Friendly Modules</li>
+          <li>Offline & Online Access</li>
+          <li>Real-World AI Projects</li>
+          <li>School-Specific Customization</li>
+        </ul>
+      </section>
+
+      <!-- Tools Preview -->
+      <section id="tools">
+        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4">Kit Includes</h2>
+        <ul class="mt-2 list-inside list-disc text-gray-700">
+          <li>AI Curriculum (PDF)</li>
+          <li>Interactive Presentation Files</li>
+          <li>Project Templates (English & Urdu)</li>
+          <li>Teacher Login Panel (Web-based)</li>
+        </ul>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials">
+        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4">What People Say</h2>
+        <div class="mt-4 space-y-4">
+          <blockquote class="bg-gray-100 p-4 rounded shadow">
+            <p>“ProbSolv’s AI Kit helped our students understand complex AI topics with ease.”</p>
+            <footer class="mt-2 text-sm text-gray-600">— Mrs. Fatima, Computer Science Teacher</footer>
+          </blockquote>
+          <blockquote class="bg-gray-100 p-4 rounded shadow">
+            <p>“Amazing resources! Loved the dual-language feature and practical AI tasks.”</p>
+            <footer class="mt-2 text-sm text-gray-600">— Sir Adeel, Principal (Govt. School)</footer>
+          </blockquote>
         </div>
-        <div>
-          <img src="https://probsolv.online/assets/ai-kit-preview.jpg" alt="AI Kit Preview" class="rounded-lg shadow" />
+      </section>
+
+      <!-- FAQs -->
+      <section id="faq">
+        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4">FAQs</h2>
+        <div class="mt-4 space-y-4">
+          <details class="bg-gray-100 p-4 rounded">
+            <summary class="font-semibold cursor-pointer">Is it suitable for all school levels?</summary>
+            <p class="mt-2 text-gray-700">Yes, it's adaptable for middle, secondary, and higher secondary levels.</p>
+          </details>
+          <details class="bg-gray-100 p-4 rounded">
+            <summary class="font-semibold cursor-pointer">Can it run without internet?</summary>
+            <p class="mt-2 text-gray-700">Yes, the main content is also provided in offline formats.</p>
+          </details>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Features Section -->
-    <section class="py-12 bg-gray-100">
-      <div class="container mx-auto px-4">
-        <h2 class="text-2xl font-bold mb-6 text-center">What's Included in the Kit?</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow">
-            <h3 class="font-bold text-lg mb-2">AI Lesson Plans</h3>
-            <p>Weekly-ready PDF lessons, practical activities, and project ideas.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <h3 class="font-bold text-lg mb-2">Teacher Guidance</h3>
-            <p>Includes a teacher panel for managing classwork and assigning AI challenges.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <h3 class="font-bold text-lg mb-2">Student Resources</h3>
-            <p>Printable worksheets, visual posters, and basic AI apps introduction.</p>
-          </div>
+      <!-- Contact -->
+      <section id="contact">
+        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4">Contact</h2>
+        <p class="mt-2">📧 Email: <a href="mailto:sameer@probsolv.online" class="text-blue-600">sameer@probsolv.online</a></p>
+        <p>📞 WhatsApp: <a href="https://wa.me/923272583013" class="text-green-600">+92 327 2583013</a></p>
+        <div class="mt-4">
+          <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">
+            🌟 Rate us on TrustPilot
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
+  </div>
 
-    <!-- Highlight Quotes -->
-    <section class="bg-white py-12">
-      <div class="container mx-auto px-4">
-        <h2 class="text-xl font-bold text-center mb-6">AI is not the future. It is the present.</h2>
-        <p class="text-center text-gray-600 italic">"ProbSolv ka mission hai har school mein AI seekhna asaan aur affordable banana."</p>
-        <p class="text-center text-gray-600 mt-2 italic">"Aaj ka student sirf consumer nahi, AI ka creator banega."</p>
-      </div>
-    </section>
+</body>
+</html>
 
-    <!-- Contact & CTA -->
-    <section class="py-12 bg-blue-700 text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl font-bold mb-4">Ready to Transform Your Classroom?</h2>
-        <p class="mb-6">Contact us now to request the full AI Kit and proposal for your school or college.</p>
-        <div class="mb-2">
-          <p>📞 +92 327 2583013</p>
-          <p>📧 sameer@probsolv.online</p>
-          <p>🌐 www.probsolv.online</p>
-        </div>
-        <a href="https://wa.me/923272583013" class="bg-white text-blue-700 px-6 py-3 mt-4 rounded hover:bg-gray-100 inline-block">Request Full Kit</a>
-      </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 text-sm text-gray-600 bg-gray-100">
-      &copy; 2025 ProbSolv. All rights reserved.
-    </footer>
 
   </body>
 </html>
