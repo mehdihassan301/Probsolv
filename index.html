@@ -4,132 +4,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProbSolv - Smart AI Solutions</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; }
-    html { scroll-behavior: smooth; }
-  </style>
+  <title>ProbSolv - Smart AI Kits for Schools</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="ProbSolv provides smart AI education kits, WhatsApp catalogs, QR storytelling, and more. Designed for schools, startups, and shops in Pakistan.">
+  <meta name="keywords" content="AI education kit, ProbSolv, smart education, WhatsApp business, QR storytelling, Pakistan startup, Sukkur, Sindh">
+  <meta name="author" content="ProbSolv Team">
+  <link rel="canonical" href="https://www.probsolv.online" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-3T7D7FQX6L');
   </script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome (for icons) -->
+  <script src="https://kit.fontawesome.com/a2e0e6f74a.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 font-sans">
 
-  <!-- Main Layout -->
-  <div class="flex flex-col md:flex-row min-h-screen">
-
-    <!-- Sidebar Navigation -->
-    <aside class="md:w-64 bg-gray-100 px-4 py-6">
-      <h2 class="text-2xl font-bold mb-4 text-indigo-700">📌 Navigation</h2>
-      <nav class="space-y-2 text-lg">
-        <a href="#services" class="block hover:text-indigo-600">Services</a>
-        <a href="#testimonials" class="block hover:text-indigo-600">Testimonials</a>
-        <a href="#faq" class="block hover:text-indigo-600">FAQs</a>
-        <a href="#about" class="block hover:text-indigo-600">About</a>
-        <a href="ai-kit.html" class="block text-blue-600 font-semibold hover:underline" target="_blank">🔗 AI Kit Page</a>
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-900 text-white flex flex-col p-4">
+      <h1 class="text-2xl font-bold mb-8">ProbSolv</h1>
+      <nav class="flex flex-col space-y-4">
+        <a href="#home" class="hover:text-yellow-400">Home</a>
+        <a href="#services" class="hover:text-yellow-400">Services</a>
+        <a href="#ai-kit" class="hover:text-yellow-400">AI Kit</a>
+        <a href="#testimonials" class="hover:text-yellow-400">Testimonials</a>
+        <a href="#faq" class="hover:text-yellow-400">FAQs</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact</a>
       </nav>
     </aside>
 
-    <!-- Page Content -->
-    <main class="flex-1 p-6 space-y-20">
-
-      <!-- Header -->
-      <header class="bg-indigo-600 text-white p-6 rounded shadow text-center">
-        <h1 class="text-3xl font-bold">ProbSolv - Smart AI Solutions</h1>
-        <p class="text-lg mt-2">Empowering Students, Shops & Startups with AI</p>
-      </header>
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto p-8 space-y-16">
+      <!-- Home Section -->
+      <section id="home">
+        <h2 class="text-4xl font-bold text-gray-800">Empowering Education & Shops with Smart AI Tools</h2>
+        <p class="mt-4 text-lg text-gray-600">ProbSolv provides modern digital tools for schools, entrepreneurs, and shops—boosting growth with AI solutions and business automation.</p>
+      </section>
 
       <!-- Services -->
       <section id="services">
-        <h2 class="text-2xl font-bold mb-4 text-center">Our Services</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white shadow-md rounded p-5">
-            <img src="service1.png" alt="Education Setup" class="w-full mb-3 rounded">
-            <h3 class="text-xl font-semibold mb-2">🎓 AI Education Setup - PKR 499</h3>
-            <p>Train students using ChatGPT, Grammarly, Canva & more. Includes Urdu/Sindhi guides + management tools.</p>
-          </div>
-          <div class="bg-white shadow-md rounded p-5">
-            <img src="service2.png" alt="WhatsApp Store" class="w-full mb-3 rounded">
-            <h3 class="text-xl font-semibold mb-2">🛒 WhatsApp Business Store - PKR 699</h3>
-            <p>Setup a complete store with product catalog, contact/payment buttons, FB linking in local language.</p>
-          </div>
-          <div class="bg-white shadow-md rounded p-5">
-            <img src="service3.png" alt="CV Design" class="w-full mb-3 rounded">
-            <h3 class="text-xl font-semibold mb-2">📝 CV Design - PKR 199</h3>
-            <p>Professional CVs designed for students & job seekers in modern formats and multiple languages.</p>
-          </div>
-        </div>
+        <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+        <ul class="space-y-3 text-lg text-gray-700 list-disc pl-5">
+          <li>WhatsApp Business Catalog Setup</li>
+          <li>QR Storytelling for Shops</li>
+          <li>Voice-to-Form for Elders</li>
+          <li>Digital Wasiat Documentation</li>
+          <li>Shop Surveillance Setup</li>
+          <li>CV & Poster Designing</li>
+        </ul>
+      </section>
+
+      <!-- AI Kit Section -->
+      <section id="ai-kit">
+        <h2 class="text-3xl font-bold mb-4">AI Education Kit for Schools & Colleges</h2>
+        <p class="text-lg mb-4 text-gray-600">Bring your school into the future. Our AI Kit offers smart learning tools, teacher training, and access to powerful AI platforms.</p>
+        <ul class="list-disc pl-5 text-gray-700">
+          <li>AI LearnPad: ChatGPT-based assistance for students</li>
+          <li>Teacher Dashboard: Monitor progress and activity</li>
+          <li>Free tools: Khanmigo, Notion AI, Socratic, Canva EDU</li>
+          <li>Bilingual: English & Urdu supported modules</li>
+        </ul>
       </section>
 
       <!-- Testimonials -->
-      <section id="testimonials" class="bg-gray-50 p-6 rounded">
-        <h2 class="text-2xl font-bold mb-4 text-center">What People Say</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white p-5 rounded shadow">
-            <p>"ProbSolv helped us digitize our store. It's now easy for customers to order!"</p>
-            <p class="mt-2 font-semibold">- Usman Ali (Shop Owner)</p>
+      <section id="testimonials">
+        <h2 class="text-3xl font-bold mb-4">What People Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-100 p-4 rounded">
+            <p class="text-gray-700">“ProbSolv helped digitize our shop beautifully with QR and AI. Highly recommended!”</p>
+            <p class="text-sm mt-2 font-semibold">– Ali Merchant, Sukkur</p>
           </div>
-          <div class="bg-white p-5 rounded shadow">
-            <p>"The AI education kit was a game-changer for our school."</p>
-            <p class="mt-2 font-semibold">- Ms. Rabia (School Teacher)</p>
+          <div class="bg-gray-100 p-4 rounded">
+            <p class="text-gray-700">“The AI kit for schools is amazing! Our teachers now guide smarter with AI.”</p>
+            <p class="text-sm mt-2 font-semibold">– Principal Ahmed, Sindh College</p>
           </div>
         </div>
       </section>
 
       <!-- FAQ -->
       <section id="faq">
-        <h2 class="text-2xl font-bold mb-4 text-center">Frequently Asked Questions</h2>
+        <h2 class="text-3xl font-bold mb-4">FAQs</h2>
         <div class="space-y-4">
-          <div class="bg-gray-100 p-4 rounded">
-            <h4 class="font-bold">What is ProbSolv?</h4>
-            <p>We provide AI-powered services for education, digital stores, CVs, and more—especially in English/Urdu.</p>
+          <div>
+            <h3 class="font-semibold text-lg">Q: What is the AI Kit?</h3>
+            <p class="text-gray-600">A plug-and-play system for schools to adopt AI-powered education within days.</p>
           </div>
-          <div class="bg-gray-100 p-4 rounded">
-            <h4 class="font-bold">Do you support local shops?</h4>
-            <p>Yes! We help digitize their stores via WhatsApp and Facebook with local language support.</p>
+          <div>
+            <h3 class="font-semibold text-lg">Q: Is it suitable for Urdu-medium schools?</h3>
+            <p class="text-gray-600">Yes! It’s available in English and Urdu both.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Q: Do I need a computer lab?</h3>
+            <p class="text-gray-600">Not at all. It works even via smartphones and basic devices.</p>
           </div>
         </div>
       </section>
 
-      <!-- About -->
-      <section id="about" class="bg-gray-50 p-6 rounded">
-        <h2 class="text-2xl font-bold mb-4 text-center">About ProbSolv</h2>
-        <p class="max-w-2xl mx-auto text-center">ProbSolv is an initiative to bring smart, fast, and affordable digital solutions to underserved areas of Pakistan using AI. We believe technology should be accessible to everyone.</p>
+      <!-- Contact -->
+      <section id="contact">
+        <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+        <p>📞 <a href="tel:+923272583013" class="text-blue-600">+92 327 2583013</a></p>
+        <p>📧 <a href="mailto:sameer@probsolv.online" class="text-blue-600">sameer@probsolv.online</a></p>
+        <p>🌐 <a href="https://www.probsolv.online" class="text-blue-600">www.probsolv.online</a></p>
       </section>
 
-      <!-- Footer -->
-      <footer class="bg-indigo-700 text-white py-6 px-4 text-center rounded">
-        <div class="mb-4 space-x-4">
-          <a href="https://wa.me/923272583013" class="inline-block text-white hover:text-green-300"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a href="https://facebook.com/probsolv.pk" class="inline-block text-white hover:text-blue-300"><i class="fab fa-facebook"></i> Facebook</a>
-          <a href="https://instagram.com/probsolv.pk" class="inline-block text-white hover:text-pink-300"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://youtube.com/@probsolv" class="inline-block text-white hover:text-red-300"><i class="fab fa-youtube"></i> YouTube</a>
-        </div>
-        <div class="mb-4">
-          <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Trustpilot_logo_2022.svg/512px-Trustpilot_logo_2022.svg.png" alt="Trustpilot" class="h-8 mx-auto" />
-          </a>
-        </div>
-        <p>&copy; 2025 ProbSolv. All rights reserved.</p>
-      </footer>
-
+      <!-- Trustpilot Button -->
+      <div class="text-center mt-10">
+        <a href="https://www.trustpilot.com/review/probsolv.online" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-block">
+          ⭐ Leave a Review on Trustpilot
+        </a>
+      </div>
     </main>
   </div>
 
-  <!-- WhatsApp Chat Button -->
-  <a href="https://wa.me/923272583013" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 z-50">
-    <i class="fab fa-whatsapp"></i> Chat
-  </a>
-
+  <!-- Footer with Socials -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p class="mb-2">© 2025 ProbSolv. All Rights Reserved.</p>
+    <div class="space-x-4">
+      <a href="https://facebook.com/probsolv.pk" target="_blank" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/probsolv.pk" target="_blank" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/923272583013" target="_blank" class="hover:text-green-500"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:sameer@probsolv.online" class="hover:text-yellow-400"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
 </body>
 </html>
 
