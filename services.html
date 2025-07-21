@@ -2,113 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services - ProbSolv</title>
-  <meta name="description" content="Detailed list of services offered by ProbSolv — AI education, WhatsApp stores, QR storytelling, Wasiat forms, and surveillance.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services – ProbSolv</title>
+  <meta name="description" content="Explore ProbSolv’s AI-powered services: AI education kits, WhatsApp store setup, CV design. Localized for Urdu and Sindhi users.">
+  <meta name="keywords" content="AI education kit, WhatsApp store setup, CV design Pakistan, Urdu CV, Sindhi digital services">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "provider": {
+      "@type": "Organization",
+      "name": "ProbSolv",
+      "url": "https://probsolv.online",
+      "logo": "https://probsolv.online/logo.png"
+    },
+    "serviceType": "AI-Powered Services",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Pakistan"
+    }
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-3T7D7FQX6L');
+  </script>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #003380;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a.active {
-      color: #ffd700;
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    h2 {
-      text-align: center;
-      color: #004aad;
-    }
-    .service {
-      background: white;
-      padding: 20px;
-      margin: 20px auto;
-      border-radius: 10px;
-      max-width: 800px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    .service h3 {
-      color: #003380;
-    }
-    footer {
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+    body { font-family: 'Segoe UI', sans-serif; }
+    .section-header { font-size: 2rem; font-weight: bold; margin-bottom: 1rem; text-align: center; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-<body>
+<body class="bg-white text-gray-800">
 
-<header>
-  <h1>Our Services</h1>
-  <p>Solutions That Solve Real Problems with Technology</p>
-</header>
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white p-6 text-center">
+    <h1 class="text-3xl font-bold">Our Services</h1>
+    <p class="text-lg mt-2">Explore AI-Powered Offerings by ProbSolv</p>
+    <nav class="mt-4 space-x-4">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="services.html" class="underline font-semibold">Services</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </nav>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="services.html" class="active">Services</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- Services Section -->
+  <section class="py-12 px-6">
+    <h2 class="section-header">What We Offer</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Service 1 -->
+      <div class="bg-white shadow-md rounded p-5">
+        <img src="service1.png" alt="AI Education Setup" class="w-full mb-3 rounded">
+        <h3 class="text-xl font-semibold mb-2">🎓 AI Education Setup – PKR 499</h3>
+        <p>Train students using ChatGPT, Grammarly, Canva & more. Includes Urdu/Sindhi guides + management tools.</p>
+      </div>
 
-<section>
-  <div class="service">
-    <h3>1. AI Education Setup (ProbSolv AI Lab / LearnPad)</h3>
-    <p>We teach students how to use tools like ChatGPT, Grammarly, and Canva in Urdu/Sindhi. We also offer AI-based career counseling and Notion templates for schools.</p>
-  </div>
+      <!-- Service 2 -->
+      <div class="bg-white shadow-md rounded p-5">
+        <img src="service2.png" alt="WhatsApp Store" class="w-full mb-3 rounded">
+        <h3 class="text-xl font-semibold mb-2">🛒 WhatsApp Business Store – PKR 699</h3>
+        <p>Setup a complete store with product catalog, contact/payment buttons, and FB linking in local language.</p>
+      </div>
 
-  <div class="service">
-    <h3>2. WhatsApp Business Store (ProbSolv Digital Dukaan)</h3>
-    <p>Create digital menus, payment/contact buttons, and teach shopkeepers to manage orders directly in WhatsApp. Connect to Facebook Shops or delivery riders.</p>
-  </div>
+      <!-- Service 3 -->
+      <div class="bg-white shadow-md rounded p-5">
+        <img src="service3.png" alt="CV Design" class="w-full mb-3 rounded">
+        <h3 class="text-xl font-semibold mb-2">📝 CV Design – PKR 199</h3>
+        <p>Professional CVs designed for students & job seekers in modern formats and multiple languages.</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="service">
-    <h3>3. QR Storytelling (ProbSolv QRaahi)</h3>
-    <p>Create QR codes that link to shop or personal story videos. Attach to banners, packaging, or boards to create brand trust and digital storytelling.</p>
-  </div>
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white py-6 px-4 text-center">
+    <div class="mb-4 space-x-4">
+      <a href="https://wa.me/923272583013" class="hover:text-green-300">WhatsApp</a>
+      <a href="https://facebook.com/probsolv.pk" class="hover:text-blue-300">Facebook</a>
+      <a href="https://instagram.com/probsolv.pk" class="hover:text-pink-300">Instagram</a>
+      <a href="https://youtube.com/@probsolv" class="hover:text-red-300">YouTube</a>
+    </div>
+    <p>&copy; 2025 ProbSolv. All rights reserved.</p>
+  </footer>
 
-  <div class="service">
-    <h3>4. Digital Wasiat Forms (ProbSolv Wasiat Safeguard)</h3>
-    <p>We create Urdu fillable forms for family instructions, property details, debts, and final wishes. Delivered via email or drive link for easy access.</p>
-  </div>
-
-  <div class="service">
-    <h3>5. Voice-to-Form Assistant (ProbSolv AwazForm)</h3>
-    <p>Elders can send voice notes, and we convert them into typed forms — pension, gas/electricity requests, or applications. Forms can be printed or sent digitally.</p>
-  </div>
-
-  <div class="service">
-    <h3>6. MiniCam Security Setup (ProbSolv MiniCam)</h3>
-    <p>Install affordable WiFi mini cameras in shops. Customers get mobile alerts and support for live monitoring. One-time setup + monthly support.</p>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 ProbSolv - Smart Solutions Lab</p>
-</footer>
-
+  <!-- Floating WhatsApp Chat Button -->
+  <a href="https://wa.me/923272583013" target="_blank"
+     class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 z-50">
+    <i class="fab fa-whatsapp"></i> Chat
+  </a>
 </body>
 </html>
+
