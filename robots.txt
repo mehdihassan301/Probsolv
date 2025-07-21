@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
+Sitemap: https://probsolv.online/sitemap.xml
 
-Sitemap: https://www.probsolv.online/sitemap.xml
