@@ -25,6 +25,7 @@
   <link rel="icon" href="favicon.ico" />
 </head>
 <body class="bg-white text-gray-800">
+
   <!-- Header -->
   <header class="bg-indigo-700 text-white py-6">
     <div class="container mx-auto px-4 flex justify-between items-center">
@@ -39,49 +40,104 @@
     </div>
   </header>
 
-  <!-- Main Section -->
-  <main class="container mx-auto px-4 py-12">
-    <section class="text-center">
-      <h2 class="text-3xl font-semibold text-indigo-700 mb-4">AI Education Kit</h2>
-      <p class="text-lg mb-8 max-w-2xl mx-auto">
-        Our AI Kit is built for students and schools in Sindh. Empower learning through hands-on AI tools, curated lessons, and project-based guidance tailored for the Pakistani education system.
-      </p>
-    </section>
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-gradient-to-br from-indigo-600 to-blue-500 text-white">
+    <h1 class="text-4xl font-bold mb-4">ProbSolv AI Education Kit</h1>
+    <p class="text-lg max-w-xl mx-auto mb-6">Empowering schools & students with practical AI learning in English, Urdu, and Sindhi.</p>
+    <a href="#download" class="bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full shadow hover:bg-gray-100 transition">Get Free Kit</a>
+  </section>
 
-    <section class="grid md:grid-cols-2 gap-8 mt-10">
-      <div>
-        <h3 class="text-xl font-bold mb-2">What's Included:</h3>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Student AI Lab Setup (Offline + Online)</li>
-          <li>Ready-to-learn modules with visual explainers</li>
-          <li>AI web developing & coding apps</li>
-          <li>Teacher’s Guide & Community Help</li>
+  <!-- What’s Inside -->
+  <section class="py-16 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">What’s Inside the Kit</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-2xl shadow border border-gray-200">
+        <h3 class="text-2xl font-semibold mb-2 text-green-600">Free Version</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>AI Basics Booklet (English & Urdu PDF)</li>
+          <li>List of Free AI Tools (Students)</li>
+          <li>Printable Poster for Classrooms</li>
+          <li>QR Code for WhatsApp Helpdesk</li>
         </ul>
       </div>
-      <div>
-        <h3 class="text-xl font-bold mb-2">Why ProbSolv Kit?</h3>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>No internet needed for core features</li>
-          <li>Works on low-cost PCs</li>
-          <li>Available in Urdu & Sindhi</li>
-          <li>Offline printable materials included</li>
+      <div class="bg-white p-6 rounded-2xl shadow border border-gray-200">
+        <h3 class="text-2xl font-semibold mb-2 text-yellow-600">Premium Version</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Customized School Branding</li>
+          <li>Offline Access (USB + Printed Booklet)</li>
+          <li>Certification Path for Students</li>
+          <li>Teachers' Training Session (Zoom/On-site)</li>
         </ul>
       </div>
-    </section>
-
-    <div class="text-center mt-12">
-      <a href="https://wa.me/923272583013?text=I'm+interested+in+your+AI+Kit" class="bg-indigo-600 text-white px-6 py-3 rounded-full shadow hover:bg-indigo-500 transition duration-300">
-        WhatsApp to Order Now
-      </a>
     </div>
-  </main>
+  </section>
+
+  <!-- Preview -->
+  <section class="py-12 px-4 max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-6">Kit Preview</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow p-4">
+        <img src="/images/ai-booklet-preview.png" alt="AI Booklet" class="rounded mb-2">
+        <p class="text-center text-sm">AI Basics Booklet (PDF)</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-4">
+        <img src="/images/ai-tools-list.png" alt="AI Tools" class="rounded mb-2">
+        <p class="text-center text-sm">Free AI Tools List</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-4">
+        <img src="/images/class-poster.png" alt="Poster" class="rounded mb-2">
+        <p class="text-center text-sm">Classroom Poster Sample</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download + Contact -->
+  <section id="download" class="py-16 px-4 max-w-2xl mx-auto">
+    <div class="bg-white rounded-2xl shadow p-8">
+      <h2 class="text-xl font-bold mb-4">Get the Free Kit</h2>
+      <p class="mb-4 text-sm">Click below to download the free version. For school registration, fill the form.</p>
+      <a href="https://probsolv.online/files/free-ai-kit.zip" target="_blank" class="block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold text-center mb-6 hover:bg-indigo-700 transition">📦 Download Free Kit</a>
+
+      <form action="https://formsubmit.co/sameer@probsolv.online" method="POST" class="space-y-4">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="school_name" placeholder="School Name" class="w-full px-4 py-2 border rounded" required>
+        <input type="text" name="contact_person" placeholder="Your Name" class="w-full px-4 py-2 border rounded" required>
+        <input type="email" name="email" placeholder="Email Address" class="w-full px-4 py-2 border rounded" required>
+        <textarea name="message" rows="4" placeholder="What do you want to know or request?" class="w-full px-4 py-2 border rounded" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">📩 Send Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-12 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-8">FAQs</h2>
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-semibold">❓ What is the AI Kit?</h3>
+        <p>A learning starter pack to help students and teachers explore Artificial Intelligence easily in Urdu, English, and Sindhi.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">❓ Who is it for?</h3>
+        <p>Government and private schools, especially in interior Sindh who want to modernize learning affordably.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">❓ How is it delivered?</h3>
+        <p>Free version is downloaded. Premium is provided physically or via WhatsApp contact.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-indigo-700 text-white py-6 text-center mt-12">
     <p>&copy; 2025 ProbSolv - Smart AI Solutions for Sindh</p>
+    <div class="mt-2 space-x-4">
+      <a href="https://wa.me/923272583013" target="_blank" class="hover:underline">WhatsApp</a>
+      <a href="https://www.instagram.com/probsolv.pk" target="_blank" class="hover:underline">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61578139677102" target="_blank" class="hover:underline">Facebook</a>
+    </div>
   </footer>
 </body>
 </html>
 
-</html>
 
