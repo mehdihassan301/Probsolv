@@ -1,21 +1,18 @@
-# Redirect non-www to www (important to avoid redirect loops)
-https://probsolv.online/*     https://www.probsolv.online/:splat   301
+# Redirect non-www to www (canonicalization)
+https://probsolv.online/*       https://www.probsolv.online/:splat 301!
 
-# Force HTTPS for www
-http://www.probsolv.online/*  https://www.probsolv.online/:splat   301
+# Force HTTPS for www (ensure HTTPS only)
+http://www.probsolv.online/*    https://www.probsolv.online/:splat 301!
 
-# Redirect index.html to root
-/index.html                  /                                    301
+# Redirect index.html to root (clean homepage)
+https://www.probsolv.online/index.html  https://www.probsolv.online/ 301
 
-# Optional: Force trailing slashes (ensure matching paths)
-# Only use this if your folder names have trailing slashes
-/services                    /services/                           301
-/about                       /about/                              301
-/contact                     /contact/                            301
-/ai-kit                      /ai-kit/                             301
+# Serve clean URLs → .html pages
+/services                       /services.html                    200
+/about                          /about.html                       200
+/contact                        /contact.html                     200
+/ai-kit                         /ai-kit.html                      200
 
-# Serve HTML files correctly without extensions
-/services/                   /services.html                       200
-/about/                      /about.html                          200
-/contact/                    /contact.html                        200
-/ai-kit/                     /ai-kit.html                         200
+# Optional: Fallback for unknown routes
+/*                              /index.html                       200
+
