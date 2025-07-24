@@ -1,0 +1,11 @@
+# Redirect index.html to root
+/index.html  /  301!
+
+# Enforce HTTPS for all traffic
+http://probsolv.online/*  https://probsolv.online/:splat  301!
+
+# Optional: Force trailing slashes
+/services  /services/  301!
+/about  /about/  301!
+/contact  /contact/  301!
+/ai-kit  /ai-kit/  301!
