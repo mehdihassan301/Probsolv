@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="auth.css">
+  <script type="module" src="auth.js"></script>
+</head>
+<body>
+  <div class="auth-container">
+    <form id="login-form" class="auth-form">
+      <h2>Sign In</h2>
+      <div id="login-error" class="auth-error" style="display:none;"></div>
+      <input type="email" id="login-email" placeholder="Email" required />
+      <input type="password" id="login-password" placeholder="Password" required minlength="6" />
+      <button type="submit">Sign In</button>
+      <div class="auth-divider">or</div>
+      <button id="google-login" type="button" class="google-btn">Sign In with Google</button>
+      <p>
+        Don’t have an account? <a href="signup.html">Sign Up</a>
+      </p>
+    </form>
+  </div>
+</body>
+</html>
