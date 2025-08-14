@@ -349,28 +349,29 @@
     </section>
 
     <!-- Order Custom AI Agent -->
-    <section id="order">
-      <h2 class="text-2xl font-semibold mb-2">Order Your Custom AI Chatbot or Agent</h2>
-      <p class="mb-4 text-gray-700">Need a custom AI for customer support, sales, education, or trading? Tell us what you need — we’ll build it.</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">    
-    <form action="https://formsubmit.co/smartsameer015@gmail.com"method="POST" class="max-w-xl mx-auto space-y-4 bg-white p-6 rounded shadow">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New AI Agent Request (ProbSolv)">
-      <input type="hidden" name="_next" value="https://www.probsolv.online/thank-you">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded" required>
-            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded" required>
-          </div
-          <input type="text" name="company" placeholder="Company / Brand (optional)" class="w-full p-3 border rounded">
-          <select name="agent_type" class="w-full p-3 border rounded" required>
-            <option value="">Select AI Agent Type</option>
-            <option>Custom Chatbot (Website/WhatsApp)</option>
-            <option>Trading Bot (Signals/Automation)</option>
-            <option>Social Media Agent (Content/DMs)</option>
-            <option>Education/Tutor Bot</option>
-            <option>Data/Research Agent</option>
-            <option>Other</option>
+ <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="7eeb8a38-00ac-4282-a1b1-58bde34a471c">
+  <input type="hidden" name="subject" value="New AI Agent Order from ProbSolv">
+  <input type="hidden" name="redirect" value="https://www.probsolv.online/thank-you">
+
+  <label>Name</label>
+  <input type="text" name="name" required>
+  <label>Email</label>
+  <input type="email" name="email" required>
+  <label>Details</label>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+<input type="text" name="company" placeholder="Company / Brand (optional)" class="w-full p-3 border rounded">
+<select name="agent_type" class="w-full p-3 border rounded" required>
+<option value="">Select AI Agent Type</option>
+<option>Custom Chatbot (Website/WhatsApp)</option>
+<option>Trading Bot (Signals/Automation)</option>
+<option>Social Media Agent (Content/DMs)</option>
+<option>Education/Tutor Bot</option>
+<option>Data/Research Agent</option>
+<option>Other</option>
           </select>
           <textarea name="description" placeholder="Describe your requirements..." class="w-full p-3 border rounded h-32" required></textarea>
           <button type="submit" class="bg-blue-700 text-white px-5 py-3 rounded font-semibold">Request AI Agent</button>
