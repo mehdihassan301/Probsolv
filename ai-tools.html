@@ -2,475 +2,264 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ProbSolv AI Tools Hub</title>
-  <meta name="description" content="Explore the best free & premium AI tools — chatbots, image/video generators, coding copilots, trading, productivity — plus custom AI agents from ProbSolv."/>
+  <meta name="description" content="Explore the best free & premium AI tools curated by ProbSolv. Chatbots, image/video AI, coding AI, trading, productivity — plus custom AI agents on demand." />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .badge{font-size:.70rem;padding:.2rem .45rem;border-radius:.375rem}
-    .tool-card:hover{transform:translateY(-2px)}
-    .category-chip{cursor:pointer}
-    .category-chip.active{background:#1d4ed8;color:#fff}
+    .card { transition: transform .12s ease, box-shadow .12s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+    .chip { font-size:.75rem; padding:.15rem .5rem; border-radius:.5rem; border:1px solid rgba(0,0,0,.08); }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
-  <!-- Top Nav -->
-  <header class="bg-white border-b sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-      <a href="https://www.probsolv.online" class="flex items-center gap-2">
-        <span class="inline-block rounded bg-blue-700 text-white px-2 py-1 text-sm font-bold">PROBSOLV</span>
-        <span class="font-semibold">AI</span>
+  <!-- Top Navigation (integrated menu) -->
+  <header class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="https://www.probsolv.online" class="flex items-center gap-3">
+        <div class="bg-blue-700 text-white font-bold px-3 py-2 rounded">PROBSOLV</div>
+        <span class="font-semibold">Services</span>
       </a>
-      <button id="menuBtn" class="sm:hidden p-2 border rounded" aria-label="Toggle menu">☰</button>
-      <nav id="mainNav" class="hidden sm:flex items-center gap-6">
-        <a href="https://www.probsolv.online" class="text-gray-700 hover:text-blue-700">Home</a>
-        <a href="https://www.probsolv.online#services" class="text-gray-700 hover:text-blue-700">Services</a>
-        <a href="https://www.probsolv.online/ai-tools" class="text-blue-700 font-semibold">AI Tools</a>
-        <a href="https://wa.me/923272583013" class="text-gray-700 hover:text-blue-700">Contact</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="https://www.probsolv.online" class="text-gray-600 hover:text-gray-900">Home</a>
+        <a href="/ai-tools" class="text-blue-700 font-semibold">AI Tools</a>
+        <a href="https://www.probsolv.online/#services" class="text-gray-600 hover:text-gray-900">Our Services</a>
+        <a href="https://www.probsolv.online/#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+        <a href="https://wa.me/923272583013" class="bg-green-500 text-white px-3 py-2 rounded">WhatsApp</a>
       </nav>
+      <button id="menuBtn" class="md:hidden border px-3 py-2 rounded">Menu</button>
     </div>
-    <div id="mobileNav" class="sm:hidden hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="https://www.probsolv.online" class="block">Home</a>
-        <a href="https://www.probsolv.online#services" class="block">Services</a>
-        <a href="https://www.probsolv.online/ai-tools" class="block font-semibold text-blue-700">AI Tools</a>
-        <a href="https://wa.me/923272583013" class="block">Contact</a>
-      </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <nav class="px-4 py-3 flex flex-col gap-2 text-sm">
+        <a href="https://www.probsolv.online" class="py-2">Home</a>
+        <a href="/ai-tools" class="py-2 font-semibold text-blue-700">AI Tools</a>
+        <a href="https://www.probsolv.online/#services" class="py-2">Our Services</a>
+        <a href="https://www.probsolv.online/#contact" class="py-2">Contact</a>
+        <a href="https://wa.me/923272583013" class="py-2">WhatsApp</a>
+      </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-blue-700 text-white text-center py-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl sm:text-4xl font-bold">ProbSolv AI Tools Hub</h1>
-      <p class="mt-3 opacity-95">Explore the best free & premium AI tools — all in one place. Launch tools instantly or order a custom AI agent tailored to your business.</p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#tools" class="bg-white text-blue-700 px-5 py-3 rounded font-semibold">Browse Tools</a>
-        <a href="#order" class="bg-blue-900 text-white px-5 py-3 rounded font-semibold">Order Custom AI Agent</a>
+  <section class="bg-blue-700 text-white">
+    <div class="max-w-7xl mx-auto p-8">
+      <h1 class="text-3xl md:text-4xl font-bold">ProbSolv AI Tools Hub</h1>
+      <p class="mt-2 text-blue-100 max-w-2xl">
+        Explore the best free & premium AI tools — chatbots, image/video AI, coding, trading and productivity.
+        Order your custom AI chatbot/agent at the bottom.
+      </p>
+      <div class="mt-4 flex gap-3">
+        <a href="#library" class="bg-white text-blue-700 px-4 py-2 rounded shadow">Browse Tools</a>
+        <a href="#order" class="border border-white px-4 py-2 rounded">Order Custom AI Agent</a>
       </div>
     </div>
   </section>
 
-  <main class="max-w-7xl mx-auto p-6 space-y-14">
-
-    <!-- Premium / Featured strip -->
-    <section class="bg-yellow-50 border border-yellow-200 rounded p-5">
-      <h2 class="text-xl font-semibold mb-2">🔥
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="https://www.jasper.ai?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Jasper AI</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Marketing copy & brand voice assistant.</p>
-        </a>
-        <a href="https://www.synthesia.io?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Synthesia</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">AI avatar videos from text.</p>
-        </a>
-        <a href="https://runwayml.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Runway</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Video editing & Gen-2 text-to-video.</p>
-        </a>
-        <a href="https://tradingview.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">TradingView</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Charts, alerts, screeners (free + pro).</p>
-        </a>
+  <!-- Search + Category filter -->
+  <main class="max-w-7xl mx-auto p-6 space-y-10">
+    <section class="flex flex-col md:flex-row items-start md:items-center gap-4 justify-between">
+      <input id="q" type="search" placeholder="Search tools (ChatGPT, Canva, TradingView, Copilot...)" class="w-full md:w-1/2 p-3 rounded border">
+      <div class="flex items-center gap-2">
+        <select id="cat" class="p-3 rounded border">
+          <option value="all">All Categories</option>
+          <option value="chat">Chatbots & Agents</option>
+          <option value="image">Image & Design AI</option>
+          <option value="video">Video Creation AI</option>
+          <option value="writing">Writing & Copy AI</option>
+          <option value="voice">Voice & Music AI</option>
+          <option value="coding">Coding & Dev AI</option>
+          <option value="business">Business & Productivity</option>
+          <option value="trading">Trading & Finance AI</option>
+        </select>
+        <button id="clear" class="p-3 bg-gray-100 rounded">Clear</button>
       </div>
     </section>
 
-    <!-- Filters + Search -->
-    <section id="tools">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div class="flex flex-wrap gap-2">
-          <span class="category-chip active px-3 py-1 rounded border" data-cat="all">All</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="chat">Chatbots</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="image">Image</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="video">Video</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="voice">Voice</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="writing">Writing</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="coding">Coding</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="productivity">Productivity</span>
-          <span class="category-chip px-3 py-1 rounded border" data-cat="trading">Trading</span>
-        </div>
-        <div class="relative">
-          <input id="searchInput" type="text" placeholder="Search tools..." class="w-full md:w-80 p-2 pr-8 border rounded">
-          <span class="absolute right-2 top-2.5 text-gray-400">🔍</span>
-        </div>
-      </div>
-
-      <!-- Tool Grid -->
-      <div id="toolGrid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <!-- Chatbots -->
-        <a data-cat="chat" data-name="ChatGPT" href="https://chat.openai.com" target="_blank" class="bg-white p-4 rounded shadow tool-card hover:shadow-lg">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">ChatGPT</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">OpenAI’s conversational assistant.</p>
-        </a>
-        <a data-cat="chat" data-name="Claude" href="https://claude.ai" target="_blank" class="bg-white p-4 rounded shadow tool-card hover:shadow-lg">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Claude</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Anthropic’s helpful reasoning model.</p>
-        </a>
-        <a data-cat="chat" data-name="Perplexity" href="https://www.perplexity.ai" target="_blank" class="bg-white p-4 rounded shadow tool-card hover:shadow-lg">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Perplexity</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Answer engine with citations.</p>
-        </a>
-        <a data-cat="chat" data-name="Poe" href="https://poe.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card hover:shadow-lg">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Poe</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Access many bots in one place.</p>
-        </a>
-
-        <!-- Image & Design -->
-        <a data-cat="image" data-name="Canva" href="https://www.canva.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Canva</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Design anything quickly (free + pro).</p>
-        </a>
-        <a data-cat="image" data-name="Photopea" href="https://photopea.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Photopea</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Photoshop-style editor in browser.</p>
-        </a>
-        <a data-cat="image" data-name="Leonardo" href="https://leonardo.ai?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Leonardo AI</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Image generation & fine control.</p>
-        </a>
-        <a data-cat="image" data-name="Midjourney" href="https://www.midjourney.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Midjourney</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">High-quality image generation.</p>
-        </a>
-        <a data-cat="image" data-name="Figma" href="https://www.figma.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Figma</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">UI design & prototyping.</p>
-        </a>
-        <a data-cat="image" data-name="Remove BG" href="https://remove.bg?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Remove.bg</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">One-click background remover.</p>
-        </a>
-
-        <!-- Video -->
-        <a data-cat="video" data-name="CapCut" href="https://www.capcut.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">CapCut</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Fast video editor (web & app).</p>
-        </a>
-        <a data-cat="video" data-name="Pictory" href="https://pictory.ai?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Pictory</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Turn scripts & blogs into videos.</p>
-        </a>
-        <a data-cat="video" data-name="InVideo" href="https://invideo.io?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">InVideo</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Templates + AI to speed edit.</p>
-        </a>
-        <a data-cat="video" data-name="HeyGen" href="https://www.heygen.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">HeyGen</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Talking avatar videos.</p>
-        </a>
-        <a data-cat="video" data-name="Lumen5" href="https://lumen5.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Lumen5</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Social media video maker.</p>
-        </a>
-
-        <!-- Voice -->
-        <a data-cat="voice" data-name="ElevenLabs" href="https://elevenlabs.io?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">ElevenLabs</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Ultra-realistic TTS & cloning.</p>
-        </a>
-        <a data-cat="voice" data-name="Murf" href="https://murf.ai?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Murf AI</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Voiceover studio in browser.</p>
-        </a>
-        <a data-cat="voice" data-name="PlayHT" href="https://play.ht?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">PlayHT</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">AI voices & cloning.</p>
-        </a>
-        <a data-cat="voice" data-name="Aiva" href="https://aiva.ai" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">AIVA</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">AI music composer.</p>
-        </a>
-
-        <!-- Writing & Copy -->
-        <a data-cat="writing" data-name="Grammarly" href="https://grammarly.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Grammarly</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Grammar, tone, AI rewrite.</p>
-        </a>
-        <a data-cat="writing" data-name="QuillBot" href="https://quillbot.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">QuillBot</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Paraphraser & summarizer.</p>
-        </a>
-        <a data-cat="writing" data-name="Copy AI" href="https://www.copy.ai?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Copy.ai</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Marketing copy templates.</p>
-        </a>
-        <a data-cat="writing" data-name="Notion AI" href="https://www.notion.so/product/ai" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Notion AI</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Docs, knowledge, & AI inside Notion.</p>
-        </a>
-
-        <!-- Coding -->
-        <a data-cat="coding" data-name="GitHub Copilot" href="https://github.com/features/copilot?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">GitHub Copilot</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Code completions in your IDE.</p>
-        </a>
-        <a data-cat="coding" data-name="Replit" href="https://replit.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Replit</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Instant dev environment.</p>
-        </a>
-        <a data-cat="coding" data-name="CodeSandbox" href="https://codesandbox.io" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">CodeSandbox</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Spin up projects in seconds.</p>
-        </a>
-        <a data-cat="coding" data-name="Codeium" href="https://codeium.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Codeium</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">AI autocomplete & chat for devs.</p>
-        </a>
-        <a data-cat="coding" data-name="AWS CodeWhisperer" href="https://aws.amazon.com/codewhisperer/" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Amazon CodeWhisperer</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">AI companion for AWS devs.</p>
-        </a>
-
-        <!-- Productivity / Biz -->
-        <a data-cat="productivity" data-name="Tome" href="https://tome.app?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Tome</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">AI-native presentations & docs.</p>
-        </a>
-        <a data-cat="productivity" data-name="ClickUp AI" href="https://clickup.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">ClickUp AI</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Tasks, docs, dashboards + AI.</p>
-        </a>
-        <a data-cat="productivity" data-name="Airtable" href="https://airtable.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Airtable</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Databases for teams with AI.</p>
-        </a>
-        <a data-cat="productivity" data-name="Zapier" href="https://zapier.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Zapier</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Automate workflows with AI.</p>
-        </a>
-
-        <!-- Trading -->
-        <a data-cat="trading" data-name="TradingView" href="https://tradingview.com?aff=probsolv" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">TradingView</h3><span class="badge bg-yellow-200 text-yellow-900">Premium</span>
-          </div>
-          <p class="text-sm text-gray-600">Advanced charts & alerts.</p>
-        </a>
-        <a data-cat="trading" data-name="Investing.com" href="https://www.investing.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">Investing.com</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Calendars, news & tools.</p>
-        </a>
-        <a data-cat="trading" data-name="LiteFinance Analytics" href="https://www.litefinance.com" target="_blank" class="bg-white p-4 rounded shadow tool-card">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-semibold">LiteFinance Analytics</h3><span class="badge bg-green-200 text-green-900">Free</span>
-          </div>
-          <p class="text-sm text-gray-600">Market analysis & signals.</p>
-        </a>
-      </div>
+    <!-- Premium spotlight -->
+    <section class="bg-white border rounded p-5">
+      <h2 class="text-xl font-semibold">🔥 Exclusive & Premium Picks</h2>
+      <p class="text-sm text-gray-600">These may include affiliate parameters (<code>?aff=probsolv</code>) — replace with your real IDs.</p>
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="premiumGrid"></div>
     </section>
 
-    <!-- Email capture -->
-    <section class="bg-white shadow rounded p-6">
-      <h2 class="text-xl font-semibold mb-2">Get Weekly AI Tools & Deals</h2>
-      <p class="text-sm text-gray-600 mb-4">We’ll send you free tools, pro tips, and discounts.</p>
-      <form action="https://formsubmit.co/smartsameer015@gmail.com"method="POST" class="flex flex-col sm:flex-row gap-3">
+    <!-- Full library -->
+    <section id="library" class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-semibold">All AI Tools Library</h2>
+        <span class="text-xs text-gray-500">Tip: many tools have generous free tiers.</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="toolsGrid"></div>
+    </section>
+
+    <!-- Email capture (optional) -->
+    <section class="bg-white border rounded p-6">
+      <h3 class="text-lg font-semibold">Get Weekly AI Tools Update</h3>
+      <p class="text-sm text-gray-600">We’ll send you new tools and deals. Unsubscribe anytime.</p>
+      <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="ProbSolv Newsletter Signup">
+        <input type="hidden" name="_subject" value="ProbSolv: New AI Tools Subscriber">
         <input type="hidden" name="_next" value="https://www.probsolv.online/thank-you">
-        <input type="email" name="email" class="flex-1 p-3 border rounded" placeholder="Your email address" required>
-        <button type="submit" class="bg-blue-700 text-white px-5 py-3 rounded font-semibold">Subscribe</button>
+        <input name="email" type="email" placeholder="Your email" class="p-3 border rounded" required>
+        <input name="name" type="text" placeholder="Your name (optional)" class="p-3 border rounded md:col-span-1">
+        <button class="p-3 bg-blue-700 text-white rounded md:col-span-1">Subscribe</button>
       </form>
-      <p class="mt-2 text-xs text-gray-500">No spam. Unsubscribe anytime.</p>
     </section>
 
-    <!-- Order Custom AI Agent -->
- <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="7eeb8a38-00ac-4282-a1b1-58bde34a471c">
-  <input type="hidden" name="subject" value="New AI Agent Order from ProbSolv">
-  <input type="hidden" name="redirect" value="https://www.probsolv.online/thank-you">
-
-  <label>Name</label>
-  <input type="text" name="name" required>
-  <label>Email</label>
-  <input type="email" name="email" required>
-  <label>Details</label>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit</button>
-</form>
-
-<input type="text" name="company" placeholder="Company / Brand (optional)" class="w-full p-3 border rounded">
-<select name="agent_type" class="w-full p-3 border rounded" required>
-<option value="">Select AI Agent Type</option>
-<option>Custom Chatbot (Website/WhatsApp)</option>
-<option>Trading Bot (Signals/Automation)</option>
-<option>Social Media Agent (Content/DMs)</option>
-<option>Education/Tutor Bot</option>
-<option>Data/Research Agent</option>
-<option>Other</option>
-          </select>
-          <textarea name="description" placeholder="Describe your requirements..." class="w-full p-3 border rounded h-32" required></textarea>
-          <button type="submit" class="bg-blue-700 text-white px-5 py-3 rounded font-semibold">Request AI Agent</button>
-          <p class="text-xs text-gray-500">Or message us on WhatsApp: <a class="underline" href="https://wa.me/923272583013" target="_blank">+92 327 2583013</a></p>
-        </form>
-
-        <div class="bg-blue-50 border border-blue-200 rounded p-6">
-          <h3 class="font-semibold text-lg mb-2">What you’ll get</h3>
-          <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
-            <li>Discovery call to finalize requirements</li>
-            <li>Design mockup & conversation flow</li>
-            <li>Build & integration (website, WhatsApp, Telegram, etc.)</li>
-            <li>Admin dashboard + training</li>
-            <li>1–3 weeks delivery depending on scope</li>
-            <li>7–30 days support & tweaks</li>
-          </ul>
-          <h3 class="font-semibold text-lg mt-4 mb-2">Popular solutions</h3>
-          <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
-            <li>Lead-capture website chatbot with CRM sheet</li>
-            <li>WhatsApp FAQ bot with menu & order flow</li>
-            <li>Trading signals assistant (non-custodial)</li>
-            <li>School/college tutor bots with content library</li>
-          </ul>
+    <!-- Order form -->
+    <section id="order" class="bg-white border rounded p-6">
+      <h3 class="text-xl font-semibold">Order a Custom AI Chatbot or Agent</h3>
+      <p class="text-sm text-gray-600">Describe your use-case — customer support, sales assistant, tutoring, trading, WhatsApp bot, etc.</p>
+      <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="ProbSolv: New AI Agent Request">
+        <input type="hidden" name="_next" value="https://www.probsolv.online/thank-you">
+        <input name="name" required placeholder="Your full name" class="p-3 border rounded">
+        <input name="email" type="email" placeholder="Email (optional)" class="p-3 border rounded">
+        <input name="whatsapp" placeholder="WhatsApp (e.g. +92327...)" class="p-3 border rounded">
+        <select name="type" class="p-3 border rounded">
+          <option value="Chatbot">Chatbot</option>
+          <option value="Trading Agent">Trading Agent / Bot</option>
+          <option value="Automation">Automation Agent (Zapier/Make)</option>
+          <option value="Custom App">Custom AI App</option>
+        </select>
+        <textarea name="details" required placeholder="Describe features, tech stack preference (if any), integrations (WhatsApp, Telegram, website, CRM), budget range." class="p-3 border rounded md:col-span-2" rows="5"></textarea>
+        <div class="md:col-span-2 flex gap-3">
+          <button class="px-4 py-2 bg-blue-700 text-white rounded">Request AI Agent</button>
+          <a class="px-4 py-2 border rounded" href="https://wa.me/923272583013?text=Hi%20ProbSolv!%20I%20want%20a%20custom%20AI%20chatbot/agent.%20Please%20contact%20me." target="_blank" rel="noopener">Quick WhatsApp Quote</a>
         </div>
-      </div>
+      </form>
+      <p class="text-xs text-gray-500 mt-3">We reply within a few hours (Pakistan time).</p>
     </section>
   </main>
 
-  <footer class="bg-gray-900 text-white mt-14">
-    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div>
-        <div class="inline-block rounded bg-blue-700 text-white px-2 py-1 text-sm font-bold">PROBSOLV</div>
-        <p class="mt-3 text-sm text-gray-300">AI tools, custom chatbots & automation — built for growth.</p>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2">Links</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="https://www.probsolv.online" class="hover:underline">Home</a></li>
-          <li><a href="https://www.probsolv.online#services" class="hover:underline">Services</a></li>
-          <li><a href="https://www.probsolv.online/ai-tools" class="hover:underline">AI Tools</a></li>
-          <li><a href="https://wa.me/923272583013" class="hover:underline">WhatsApp</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2">Stay Updated</h4>
-     <form action="https://formsubmit.co/sameer@probsolv.online" method="POST">
-  <!-- Optional redirect after submit -->
-  <input type="hidden" name="_next" value="https://www.probsolv.online/thank-you.html">
-  <!-- Disable captcha -->
-  <input type="hidden" name="_captcha" value="false">
-
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
-
-      </div>
-    </div>
-    <div class="text-center text-xs text-gray-400 pb-6">&copy; 2025 ProbSolv. All rights reserved.</div>
+  <footer class="bg-gray-900 text-white text-center p-5 mt-10">
+    <p>© ProbSolv — AI Tools & Agents</p>
   </footer>
 
   <script>
-    // Mobile nav
-    const menuBtn=document.getElementById('menuBtn');
-    const mainNav=document.getElementById('mainNav');
-    const mobileNav=document.getElementById('mobileNav');
-    if(menuBtn){
-      menuBtn.addEventListener('click',()=>{
-        mobileNav.classList.toggle('hidden');
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn) menuBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+
+    // ---- Tool data (edit/extend freely). For affiliate links, replace aff/ref placeholders with real IDs. ----
+    const tools = [
+      // Chatbots & Agents
+      { name:'ChatGPT', url:'https://chat.openai.com', desc:'OpenAI conversational assistant (free tier available).', cat:'chat', premium:false, badge:'Free', icon:'🤖' },
+      { name:'Claude', url:'https://claude.ai', desc:'Anthropic’s high-quality chatbot.', cat:'chat', premium:false, badge:'Free', icon:'🤝' },
+      { name:'Perplexity', url:'https://www.perplexity.ai', desc:'Answer engine with citations.', cat:'chat', premium:false, badge:'Free', icon:'🔎' },
+      { name:'Poe', url:'https://poe.com?aff=probsolv', desc:'Multi-model chat hub (GPT/Claude etc.).', cat:'chat', premium:true, badge:'Premium', icon:'🗣️' },
+      { name:'Mistral Chat', url:'https://chat.mistral.ai', desc:'Fast LLM chat by Mistral.', cat:'chat', premium:false, badge:'Free', icon:'🌪️' },
+      { name:'Jasper', url:'https://www.jasper.ai?aff=probsolv', desc:'Marketing & copywriting AI.', cat:'chat', premium:true, badge:'Premium', icon:'📣' },
+
+      // Image & Design
+      { name:'Canva', url:'https://www.canva.com?ref=probsolv', desc:'Design anything with templates.', cat:'image', premium:true, badge:'Freemium', icon:'🎨' },
+      { name:'Photopea', url:'https://www.photopea.com', desc:'Photoshop-like editor in browser.', cat:'image', premium:false, badge:'Free', icon:'🖼️' },
+      { name:'Leonardo AI', url:'https://leonardo.ai?aff=probsolv', desc:'Image generation & finetuned models.', cat:'image', premium:true, badge:'Premium', icon:'🧙' },
+      { name:'Playground AI', url:'https://playgroundai.com', desc:'Free/starter image generation.', cat:'image', premium:false, badge:'Free', icon:'🪄' },
+      { name:'Remove.bg', url:'https://remove.bg?aff=probsolv', desc:'Remove backgrounds instantly.', cat:'image', premium:true, badge:'Freemium', icon:'🧼' },
+      { name:'Figma', url:'https://www.figma.com?ref=probsolv', desc:'Interface design & prototyping.', cat:'image', premium:true, badge:'Freemium', icon:'📐' },
+
+      // Video
+      { name:'CapCut Web', url:'https://www.capcut.com', desc:'Quick short-form video editor.', cat:'video', premium:false, badge:'Free', icon:'✂️' },
+      { name:'Runway', url:'https://runwayml.com?aff=probsolv', desc:'AI video, green screen, gen-2.', cat:'video', premium:true, badge:'Premium', icon:'🎬' },
+      { name:'Pictory', url:'https://pictory.ai?aff=probsolv', desc:'Script-to-video creator.', cat:'video', premium:true, badge:'Premium', icon:'📜' },
+      { name:'InVideo', url:'https://invideo.io?aff=probsolv', desc:'Marketing videos from templates.', cat:'video', premium:true, badge:'Premium', icon:'🎞️' },
+      { name:'HeyGen', url:'https://www.heygen.com?aff=probsolv', desc:'AI avatars, talking head videos.', cat:'video', premium:true, badge:'Premium', icon:'🧑‍🎤' },
+
+      // Writing & Copy
+      { name:'Writesonic', url:'https://writesonic.com?aff=probsolv', desc:'Blogs, ads, SEO content.', cat:'writing', premium:true, badge:'Premium', icon:'✍️' },
+      { name:'Copy.ai', url:'https://www.copy.ai?aff=probsolv', desc:'Team marketing copy platform.', cat:'writing', premium:true, badge:'Premium', icon:'📝' },
+      { name:'Grammarly', url:'https://grammarly.com?ref=probsolv', desc:'Grammar & clarity assistant.', cat:'writing', premium:true, badge:'Freemium', icon:'✅' },
+      { name:'QuillBot', url:'https://quillbot.com?aff=probsolv', desc:'Paraphrasing & summarizing.', cat:'writing', premium:true, badge:'Freemium', icon:'🔁' },
+      { name:'Hemingway', url:'https://hemingwayapp.com', desc:'Make writing bold & clear.', cat:'writing', premium:false, badge:'Free', icon:'📗' },
+
+      // Voice & Music
+      { name:'ElevenLabs', url:'https://elevenlabs.io?aff=probsolv', desc:'Realistic text-to-speech.', cat:'voice', premium:true, badge:'Premium', icon:'🔊' },
+      { name:'Murf AI', url:'https://murf.ai?aff=probsolv', desc:'Studio-quality voiceovers.', cat:'voice', premium:true, badge:'Premium', icon:'🎙️' },
+      { name:'Audyo', url:'https://www.audyo.ai', desc:'Fast TTS editing with text.', cat:'voice', premium:false, badge:'Free', icon:'🗣️' },
+      { name:'AIVA', url:'https://www.aiva.ai', desc:'AI music composition.', cat:'voice', premium:false, badge:'Free', icon:'🎼' },
+      { name:'Soundraw', url:'https://soundraw.io?ref=probsolv', desc:'Royalty-free AI music.', cat:'voice', premium:true, badge:'Premium', icon:'🎵' },
+
+      // Coding & Dev
+      { name:'GitHub Copilot', url:'https://github.com/features/copilot?ref=probsolv', desc:'AI pair programmer.', cat:'coding', premium:true, badge:'Premium', icon:'👩‍💻' },
+      { name:'Codeium', url:'https://codeium.com?aff=probsolv', desc:'Free AI code assistant.', cat:'coding', premium:false, badge:'Free', icon:'💡' },
+      { name:'Tabnine', url:'https://www.tabnine.com?aff=probsolv', desc:'Code completions for IDEs.', cat:'coding', premium:true, badge:'Premium', icon:'🔧' },
+      { name:'AWS CodeWhisperer', url:'https://aws.amazon.com/codewhisperer', desc:'AI coding by Amazon.', cat:'coding', premium:false, badge:'Free', icon:'☁️' },
+      { name:'Replit', url:'https://replit.com', desc:'Browser coding + hosting.', cat:'coding', premium:false, badge:'Free', icon:'💻' },
+
+      // Business & Productivity
+      { name:'Notion AI', url:'https://www.notion.so?ref=probsolv', desc:'Docs, wiki, databases + AI.', cat:'business', premium:true, badge:'Freemium', icon:'📚' },
+      { name:'ClickUp AI', url:'https://clickup.com?aff=probsolv', desc:'Project management + docs.', cat:'business', premium:true, badge:'Premium', icon:'📈' },
+      { name:'Tome', url:'https://tome.app?ref=probsolv', desc:'AI-native presentations & docs.', cat:'business', premium:true, badge:'Freemium', icon:'📊' },
+      { name:'Airtable', url:'https://airtable.com?ref=probsolv', desc:'Relational tables + automations.', cat:'business', premium:true, badge:'Freemium', icon:'🗂️' },
+      { name:'Zapier', url:'https://zapier.com?ref=probsolv', desc:'Connect apps & automate work.', cat:'business', premium:true, badge:'Freemium', icon:'⚙️' },
+
+      // Trading & Finance
+      { name:'TradingView', url:'https://www.tradingview.com/?aff=probsolv', desc:'Pro charts & indicators.', cat:'trading', premium:true, badge:'Freemium', icon:'📈' },
+      { name:'Investing.com', url:'https://www.investing.com', desc:'Markets, news, calendars.', cat:'trading', premium:false, badge:'Free', icon:'📰' },
+      { name:'CoinMarketCap', url:'https://coinmarketcap.com', desc:'Crypto market data.', cat:'trading', premium:false, badge:'Free', icon:'🪙' },
+      { name:'CoinGecko', url:'https://www.coingecko.com', desc:'Crypto prices & research.', cat:'trading', premium:false, badge:'Free', icon:'🧭' },
+      { name:'Myfxbook', url:'https://www.myfxbook.com', desc:'Forex analytics & tools.', cat:'trading', premium:false, badge:'Free', icon:'💱' },
+    ];
+
+    // Build Premium spotlight (premium:true)
+    const premiumGrid = document.getElementById('premiumGrid');
+    tools.filter(t => t.premium).slice(0, 9).forEach(t => premiumGrid.appendChild(toolCard(t, true)));
+
+    // Build full library
+    const grid = document.getElementById('toolsGrid');
+    tools.forEach(t => grid.appendChild(toolCard(t, false)));
+
+    // Search & filter
+    const q = document.getElementById('q'), cat = document.getElementById('cat'), clearBtn = document.getElementById('clear');
+    function applyFilters(){
+      const query = (q.value || '').toLowerCase();
+      const c = cat.value;
+      [...grid.children].forEach(card => {
+        const title = card.getAttribute('data-title');
+        const category = card.getAttribute('data-cat');
+        const matchQ = !query || title.includes(query);
+        const matchC = c==='all' || category===c;
+        card.style.display = (matchQ && matchC) ? '' : 'none';
       });
     }
+    q.addEventListener('input', applyFilters);
+    cat.addEventListener('change', applyFilters);
+    clearBtn.addEventListener('click', ()=>{ q.value=''; cat.value='all'; applyFilters(); });
 
-    // Category filtering
-    const chips=[...document.querySelectorAll('.category-chip')];
-    const cards=[...document.querySelectorAll('#toolGrid > a')];
-    chips.forEach(ch=>{
-      ch.addEventListener('click',()=>{
-        chips.forEach(c=>c.classList.remove('active'));
-        ch.classList.add('active');
-        const cat=ch.dataset.cat;
-        cards.forEach(card=>{
-          const ok=(cat==='all') || (card.dataset.cat===cat);
-          card.style.display = ok ? '' : 'none';
-        });
-      });
-    });
+    // Card factory
+    function toolCard(t, spotlight){
+      const a = document.createElement('a');
+      a.href = t.url; a.target = '_blank'; a.rel = 'noopener';
+      a.className = 'card bg-white rounded border p-4 flex flex-col gap-2';
+      a.setAttribute('data-title', (t.name + ' ' + t.desc).toLowerCase());
+      a.setAttribute('data-cat', t.cat);
 
-    // Search
-    const searchInput=document.getElementById('searchInput');
-    if(searchInput){
-      searchInput.addEventListener('input',()=>{
-        const q=searchInput.value.toLowerCase().trim();
-        cards.forEach(card=>{
-          const name=(card.dataset.name||'').toLowerCase();
-          card.style.display = name.includes(q) ? '' : 'none';
-        });
-      });
+      const top = document.createElement('div');
+      top.className = 'flex items-start justify-between gap-2';
+      const left = document.createElement('div');
+      left.className = 'flex items-center gap-2';
+      const ic = document.createElement('div');
+      ic.textContent = t.icon || '✨';
+      const h = document.createElement('h3');
+      h.className = 'font-semibold'; h.textContent = t.name;
+      left.appendChild(ic); left.appendChild(h);
+
+      const badge = document.createElement('span');
+      badge.className = 'chip ' + (t.premium ? 'bg-yellow-50 border-yellow-200 text-yellow-700' : 'bg-gray-50 border-gray-200 text-gray-700');
+      badge.textContent = t.badge || (t.premium ? 'Premium' : 'Free');
+
+      top.appendChild(left); top.appendChild(badge);
+
+      const p = document.createElement('p');
+      p.className = 'text-sm text-gray-600';
+      p.textContent = t.desc;
+
+      a.appendChild(top); a.appendChild(p);
+      return a;
     }
   </script>
 </body>
 </html>
+
