@@ -1,6 +1,6 @@
 # ProbSolv
 
-Official website of ProbSolv – Deep Solutions, Advanced Tech.
+Official website of ProbSolv – Graphic Designing - Advanced Tech.
 
 ---
 
@@ -12,15 +12,15 @@ Official website of ProbSolv – Deep Solutions, Advanced Tech.
 
 ## 🚀 Overview
 
-ProbSolv provides advanced AI-driven solutions for students, shops, and startups. Our platform offers a suite of tools, booklets, and services to empower users with artificial intelligence for real-world problem-solving.
+ProbSolv provides advanced web developers for designing a high quality, performing website in 21st century.
 
 ---
 
 ## ✨ Features
 
-- AI Booklet downloads (PDF)
-- AI Tools for education and business
-- Blog articles on AI trends and applications
+- Logo Design
+- Landing page for brands and business
+- Blog articles on businesses trends
 - Contact and support forms
 - Responsive, modern design with TailwindCSS
 - Privacy Policy & Terms of Service integrated
@@ -32,7 +32,6 @@ ProbSolv provides advanced AI-driven solutions for students, shops, and startups
 - `index.html` – Home page
 - `about.html` – About ProbSolv
 - `services.html` – Services offered
-- `ai-kit.html` – AI Booklet and tools
 - `blog.html` – Blog articles
 - `contact.html` – Contact form
 - `privacy-policy.html`, `terms.html` – Legal documents
