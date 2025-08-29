@@ -1,193 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProbSolv Website Designer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-black text-gray-200 font-sans">
-    <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-  <!-- Canonical URL -->
- <link rel="canonical" href="https://www.probsolv.online/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProbSolv | Global Web Development Company</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="We develop and design professional and landing page websites for business, startups, and shops." />
-  <meta name="keywords" content="website designer, web developer, brands, ecommerce, shops, businesses,online stores " />
-  <meta name="author" content="ProbSolv" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="en" />
-  <meta name="distribution" content="global" />
+  <meta name="description" content="ProbSolv is a global web development company providing professional websites, UI/UX design, SEO optimization, ecommerce stores, and custom web apps for startups and businesses worldwide.">
+  <meta name="keywords" content="global web development company, web development services, professional website developer, custom website design, web development agency, UI/UX design, SEO optimization, ecommerce development, startup websites, responsive web design, custom web apps, AdSense approval, website maintenance">
+  <meta name="author" content="ProbSolv">
+  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="ProbSolv -Web Designing Services" />
-  <meta property="og:description" content="Explore website designing services for business, and public empowerment. English/ Urdu support for startups and communities." />
-  <meta property="og:image" content="https://probsolv.online/logo.png" />
-  <meta property="og:url" content="https://probsolv.online/" />
-  <meta property="og:type" content="website" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="ProbSolv | Global Web Development Company">
+  <meta property="og:description" content="Professional web development and digital solutions for startups, entrepreneurs, and businesses worldwide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.probsolv.online/">
+  <meta property="og:image" content="https://www.probsolv.online/assets/banner.png">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ProbSolv - Modern Website Design" />
-  <meta name="twitter:description" content="Serving as web developer for online shops, startup, brands and businesses." />
-  <meta name="twitter:image" content="https://probsolv.online/logo.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ProbSolv | Global Web Development Company">
+  <meta name="twitter:description" content="Professional web development and digital solutions for startups, entrepreneurs, and businesses worldwide.">
+  <meta name="twitter:image" content="https://www.probsolv.online/assets/banner.png">
 
-  <!-- Structured Data -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ProbSolv",
-    "url": "https://www.probsolv.online",
-    "logo": "https://www.probsolv.online/logo.png",
+    "url": "https://www.probsolv.online/",
+    "logo": "https://www.probsolv.online/assets/logo.png",
     "sameAs": [
-      "https://facebook.com/Solution provider",
-      "https://instagram.com/probsolv.online",
-      "https://youtube.com/@probsolv"
+      "https://www.instagram.com/probsolv.pk",
+      "https://www.facebook.com/profile.php?id=61578139677102",
+      "https://www.youtube.com/channel/UC1dYL4axL0zuxrq2Sjlerkw"
     ],
-    "description": "Web developing services for startups, businesses, shops."
+    "description": "ProbSolv is a global web development company offering websites, UI/UX design, SEO, ecommerce, and branding solutions.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "telephone": "+92-327-2583013",
+      "email": "probsolv.pk@gmail.com"
+    }
   }
   </script>
 
-  <!-- TailwindCSS -->
- <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T7D7FQX6L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-3T7D7FQX6L');
-  </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5793534087555964"
-     crossorigin="anonymous"></script>
-
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; }
-    .section-header { font-size: 2rem; font-weight: bold; margin-bottom: 1rem; text-align: center; }
-    html { scroll-behavior: smooth; }
-  </style>
-
-  <style>
-  h1, h2, h3, p, a {
-    text-shadow: none !important;
-  }
-</style>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-black text-white font-sans">
 
   <!-- Navbar -->
-  <header class="fixed top-0 w-full bg-black/90 border-b border-green-500 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-green-400">ProbSolv</h1>
-      <nav class="space-x-1">
-        <a href="#services" class="hover:text-green-400 transition">Services</a>
-        <a href="#pricing" class="hover:text-green-400 transition">Pricing</a>
-        <a href="#portfolio" class="hover:text-green-400 transition">Portfolio</a>
-        <a href="ai-tools.html" class="hover:text-green-400 transition">AI Tools</a>
-        <a href="#contact" class="hover:text-green-400 transition">Contact</a>
+  <header class="bg-black sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <!-- Logo -->
+      <a href="index.html" class="text-xl font-bold text-[#14ffec]">ProbSolv</a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex gap-6">
+        <a href="#our-aim" class="hover:text-[#14ffec]">Our Aim</a>
+        <a href="#meet-us" class="hover:text-[#14ffec]">Meet Us</a>
+        <a href="#support" class="hover:text-[#14ffec]">Support</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 px-6 py-4 space-y-2">
+      <a href="#our-aim" class="block hover:text-[#14ffec]">Our Aim</a>
+      <a href="#meet-us" class="block hover:text-[#14ffec]">Meet Us</a>
+      <a href="#support" class="block hover:text-[#14ffec]">Support</a>
     </div>
   </header>
-
   <!-- Hero -->
-  <section class="pt-32 pb-20 text-center max-w-3xl mx-auto px-6">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-green-400 mb-6">Modern Website Design for Businesses</h2>
-    <p class="text-lg text-gray-400 mb-8">We design sleek, responsive, and scalable websites that help your business grow online.</p>
-    <a href="#contact" class="bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-lg shadow-lg transition">Get Started</a>
+  <section class="text-center py-20 px-6 bg-gradient-to-b from-black to-gray-900">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+      We Build Websites That Grow Your Business
+    </h1>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">
+      Custom websites, ecommerce stores, and digital solutions for startups & businesses worldwide.
+    </p>
+    <a href="#contact" class="mt-6 inline-block bg-[#14ffec] text-black px-6 py-3 rounded-2xl font-semibold hover:bg-white transition">
+      Request a Free Consultation
+    </a>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="py-20 max-w-7xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-green-400 text-center mb-12">Our Services</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-900 rounded-xl p-6 shadow hover:shadow-green-400/30 transition">
-        <h4 class="text-xl font-semibold mb-3">Business Websites</h4>
-        <p class="text-gray-400">Professional websites designed for small to large businesses with SEO and mobile optimization.</p>
-      </div>
-      <div class="bg-gray-900 rounded-xl p-6 shadow hover:shadow-green-400/30 transition">
-        <h4 class="text-xl font-semibold mb-3">E-Commerce Stores</h4>
-        <p class="text-gray-400">Launch your online shop with secure payments, product showcases, and fast performance.</p>
-      </div>
-      <div class="bg-gray-900 rounded-xl p-6 shadow hover:shadow-green-400/30 transition">
-        <h4 class="text-xl font-semibold mb-3">Portfolio & Branding</h4>
-        <p class="text-gray-400">Personal portfolios and brand sites with modern design to showcase your work and story.</p>
-      </div>
+  <!-- Main Service -->
+  <section id="main-service" class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">🌐 Web Development</h2>
+    <p class="text-center max-w-3xl mx-auto text-gray-300 mb-10">
+      Our primary service is professional web development — responsive, secure, and scalable websites designed to help startups and enterprises establish a global digital presence.
+    </p>
+    <div class="bg-gray-900 p-8 rounded-2xl shadow text-center">
+      <h3 class="text-2xl font-semibold mb-4 text-[#14ffec]">Custom Websites for Global Clients</h3>
+      <p>From business websites and landing pages to full-fledged ecommerce platforms, we deliver solutions that help you grow and scale internationally.</p>
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section id="pricing" class="py-20 bg-black border-t border-green-500">
-    <h3 class="text-3xl font-bold text-green-400 text-center mb-12">Pricing Plans</h3>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-      <div class="bg-gray-900 rounded-xl p-8 text-center shadow hover:shadow-green-400/30 transition">
-        <h4 class="text-2xl font-semibold mb-4">Starter</h4>
-        <p class="text-4xl font-bold text-green-400 mb-6">$35</p>
-        <ul class="text-gray-400 space-y-2 mb-6">
-          <li>1 Page Website</li>
-          <li>Mobile Responsive</li>
-          <li>Basic SEO</li>
-        </ul>
-        <a href="#contact" class="bg-green-500 hover:bg-green-400 text-black px-5 py-2 rounded-lg">Choose</a>
-      </div>
-      <div class="bg-gray-900 rounded-xl p-8 text-center shadow hover:shadow-green-400/30 transition scale-105">
-        <h4 class="text-2xl font-semibold mb-4">Standard</h4>
-        <p class="text-4xl font-bold text-green-400 mb-6">$49</p>
-        <ul class="text-gray-400 space-y-2 mb-6">
-          <li>Up to 5 Pages</li>
-          <li>Custom Design</li>
-          <li>SEO Optimized</li>
-        </ul>
-        <a href="#contact" class="bg-green-500 hover:bg-green-400 text-black px-5 py-2 rounded-lg">Choose</a>
-      </div>
-      <div class="bg-gray-900 rounded-xl p-8 text-center shadow hover:shadow-green-400/30 transition">
-        <h4 class="text-2xl font-semibold mb-4">Premium</h4>
-        <p class="text-4xl font-bold text-green-400 mb-6">$99</p>
-        <ul class="text-gray-400 space-y-2 mb-6">
-          <li>Unlimited Pages</li>
-          <li>Advanced Features</li>
-          <li>Priority Support</li>
-        </ul>
-        <a href="#contact" class="bg-green-500 hover:bg-green-400 text-black px-5 py-2 rounded-lg">Choose</a>
-      </div>
+  <!-- Secondary Services -->
+  <section id="secondary-services" class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Other Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">UI/UX Design</h3><p>Modern, user-friendly designs that enhance engagement.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">SEO Optimization</h3><p>On-page & technical SEO to boost global visibility.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">Speed Optimization</h3><p>Faster load times and better performance.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">Mobile Responsiveness</h3><p>Websites that work seamlessly on all devices.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">CMS Development</h3><p>WordPress, Shopify, Wix, and Squarespace solutions.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">E-commerce Development</h3><p>Secure, scalable, and conversion-optimized stores.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">Custom Web Apps</h3><p>Tailored applications for startups & businesses.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">AdSense & Monetization</h3><p>Setup & approval guidance for website monetization.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">Business Websites</h3><p>Portfolio, brand, and corporate sites for global clients.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">Maintenance & Support</h3><p>Updates, bug fixes, and long-term support.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">Landing Pages</h3><p>High-converting landing and sales pages.</p></div>
+      <div class="bg-gray-900 p-6 rounded-2xl shadow"><h3 class="text-xl font-semibold mb-2">Hosting & Domain Setup</h3><p>Complete setup and configuration for your business.</p></div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="py-20 px-6 bg-gray-900">
+    <h2 class="text-3xl font-bold mb-6 text-center">Why Choose ProbSolv?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
+      <div><h3 class="text-xl font-semibold mb-2 text-[#14ffec]">Global Expertise</h3><p>Serving startups & businesses worldwide with industry standards.</p></div>
+      <div><h3 class="text-xl font-semibold mb-2 text-[#14ffec]">Fast Delivery</h3><p>We deliver projects on time without compromising quality.</p></div>
+      <div><h3 class="text-xl font-semibold mb-2 text-[#14ffec]">Affordable Packages</h3><p>Cost-effective solutions for businesses of all sizes.</p></div>
+      <div><h3 class="text-xl font-semibold mb-2 text-[#14ffec]">Ongoing Support</h3><p>Dedicated support and maintenance after launch.</p></div>
     </div>
   </section>
 
   <!-- Portfolio -->
-<section id="portfolio" class="py-20 bg-black text-center">
-  <h3 class="text-3xl font-bold mb-12 text-green-400">Portfolio Samples</h3>
-  <div class="flex justify-center">
-    <a href="https://drive.google.com/drive/folders/YOUR_DRIVE_FOLDER_ID_HERE" 
-       target="_blank" 
-       class="px-8 py-4 text-lg font-semibold rounded-2xl 
-              bg-green-500 text-black 
-              hover:bg-green-400 hover:scale-105 
-              transition shadow-lg">
-      View My Work
-    </a>
-  </div>
-</section>
-
+  <section id="portfolio" class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Portfolio</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-900 p-6 rounded-xl shadow">Gold Trading Academy (Khairpur)</div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow">Crypto & Freelancing Institute (Karachi)</div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow">ProbSolv Official Website</div>
+    </div>
+  </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-black border-t border-green-500">
-    <h3 class="text-3xl font-bold text-green-400 text-center mb-12">Contact Us</h3>
-    <form class="max-w-xl mx-auto bg-gray-900 p-8 rounded-xl shadow-lg space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-green-400 focus:ring-1 focus:ring-green-400">
-      <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-green-400 focus:ring-1 focus:ring-green-400">
-      <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-green-400 focus:ring-1 focus:ring-green-400"></textarea>
-      <button class="w-full bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-lg shadow-lg">Send Message</button>
-    </form>
+  <section id="contact" class="py-20 px-6 bg-black">
+    <h2 class="text-3xl font-bold mb-6 text-center">Start Your Project</h2>
+    <div class="max-w-2xl mx-auto">
+      <form action="mailto:probsolv.pk@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded bg-gray-900 border border-gray-700">
+        <textarea name="message" placeholder="Tell us about your business & project" class="w-full p-3 rounded bg-gray-900 border border-gray-700" rows="5"></textarea>
+        <button type="submit" class="bg-[#14ffec] text-black px-6 py-3 rounded-2xl font-semibold hover:bg-white transition">Request a Free Consultation</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 bg-black border-t border-green-500 text-center text-gray-500">
-    © 2025 ProbSolv. All rights reserved.
+  <footer class="bg-gray-950 text-center py-6 border-t border-gray-800">
+    <p>&copy; 2025 ProbSolv. All Rights Reserved.</p>
   </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/923272583013" target="_blank" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6">
+  </a>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
