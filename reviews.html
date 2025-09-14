@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leave a Review — Cryptocurrency & Freelancing Institute (DHA, Karachi)</title>
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --accent:#1469e6; --accent-2:#28a745;
+      --muted:#6b7280; --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:#111}
+    .wrap{max-width:820px;margin:18px auto;padding:18px;}
+    header{display:flex;align-items:center;gap:12px}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:6px 0 14px;color:var(--muted)}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(12,20,30,0.06);padding:14px;}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+    .big-btn{background:var(--accent-2);color:white;border:0;padding:12px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+    .reset-btn{background:transparent;border:1px solid #e5e7eb;padding:9px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .count{margin-left:auto;color:var(--muted);font-size:14px;align-self:center}
+    ol.reviews{padding-left:18px;margin:12px 0 0}
+    li.review{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;margin-bottom:8px;background:linear-gradient(180deg, rgba(0,0,0,0.01), transparent);transition:all .18s}
+    .text{flex:1;color:#111;line-height:1.4}
+    .meta{display:flex;flex-direction:column;gap:8px}
+    .copy-btn{background:var(--accent);color:white;border:0;padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:600}
+    .copied{background:#0b6be6}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media(max-width:620px){
+      .wrap{padding:12px}
+      .controls{flex-direction:column;align-items:stretch}
+      .count{margin-left:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Cryptocurrency & Freelancing Institute — DHA, Karachi</h1>
+        <p class="lead">Choose a unique review, tap <strong>Copy</strong>, then click <strong>Post Review on Google</strong> and paste. Copied reviews are removed from this page automatically.</p>
+      </div>
+    </header>
+
+    <div class="card" id="mainCard">
+      <div class="controls" aria-hidden="false">
+        <a id="googleLink" class="big-btn" href="https://g.page/r/CeOK0ZD1HzT7EAE/review" target="_blank" rel="noopener noreferrer">
+          Post Review on Google
+        </a>
+        <button id="resetBtn" class="reset-btn" title="Restore removed reviews on this browser">Restore removed reviews</button>
+        <div class="count" id="countText">30 reviews available</div>
+      </div>
+
+      <ol class="reviews card" id="reviewsList" aria-live="polite">
+        <!-- Reviews will be injected here -->
+      </ol>
+
+      <footer>
+        Tip: Ask students to add their first name / area (e.g., "— Ali, Clifton") to keep reviews natural.
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // --- REVIEWS ARRAY (26) ---
+    const reviews = [
+"I joined their crypto batch  last month. I Was totally new but the mentor made it very simple , now i can trade easily ..",
+" I didn’t trust online courses. But after attending in person, I saw they are genuine people who really teach trading from basic to advanced  .",
+"I Learned freelancing basics here. They even helped me make my first profile on Fiverr.",
+"They go topic by topic until everyone understands. Impressed by these patient teachers.",
+"I was nervous in first days of trading but the environment and their guidance made it comfortable for me. ",
+"Before joining, I was scared of crypto scams. They cleared all doubts and taught safe methods.",
+"My cousin and I joined together. Now both of us are practicing small trades daily. Feeling proud.",
+"They don’t just teach theory — they make us do real practice on live charts.  ",
+"They teach freelancing and crypto trading clearly until we reach real results. ",
+"The teachers here are humble and approachable. You can ask any question without hesitation.",
+"Iam impressed by thir mentorship. They still guide me on WhatsApp even after class.",
+"I Joinedin crypto trading course with zero knowledge, and now after 3 weeks I can understand signals and candle patterns.",
+"I met supportive classmates here. We still share opportunities and tips with each other.",
+"It’s a supportive group , we get personal attention for each queries. ",
+"They gave honest advice, not fake promises of instant money.",
+"I came to learn freelancing, but ended up building interest in blockchain as well. They guide everyone step by step, and even help you set up your profiles and portfolios.”",
+"I met really supportive classmates here. We help each other even outside class.",
+"It was worth . I actually learned practical instead of just watching random videos.",
+"Mentors are experienced and speak in simple Urdu and English. Everyone understand easily.",
+"I finally made my first crypto wallet safely because of step-by-step guidance.",
+"They are very responsive. If I message them at night with a doubt, they reply quickly.",
+"It’s not just about trading — they also teach us discipline and patience.",
+"Very peaceful and clean place in DHA. Makes you feel like learning seriously.",
+"I never thought I could understand trading, but they made it so simple.",
+"The trading session opened my mind. Now I make a grest income.",
+"The institute gave me clarity about my future. No pressure, just results.",
+"Every class has something new and practical.",
+    ];
+
+    // --- localStorage key for removed reviews on this browser ---
+    const STORAGE_KEY = 'cfi_removed_reviews_v1'; // cfi = cryptocurrency & freelancing institute
+
+    // get removed set from localStorage
+    function getRemovedSet(){
+      try{
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if(!raw) return new Set();
+        const arr = JSON.parse(raw);
+        return new Set(Array.isArray(arr) ? arr : []);
+      } catch(e){ return new Set(); }
+    }
+    function saveRemovedSet(set){
+      try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set))); }catch(e){}
+    }
+
+    // render reviews (excluding removed)
+    function render(){
+      const list = document.getElementById('reviewsList');
+      list.innerHTML = '';
+      const removed = getRemovedSet();
+      let visibleCount = 0;
+      reviews.forEach((text, idx) => {
+        if(removed.has(String(idx))) return;
+        visibleCount++;
+        const li = document.createElement('li');
+        li.className = 'review';
+        li.dataset.index = idx;
+        li.innerHTML = `
+          <div class="text"><strong>${idx + 1}.</strong> ${escapeHtml(text)}</div>
+          <div class="meta">
+            <button class="copy-btn" aria-label="Copy review ${idx+1}">Copy</button>
+          </div>
+        `;
+        li.querySelector('.copy-btn').addEventListener('click', async (e) => {
+          try{
+            await navigator.clipboard.writeText(text);
+          }catch(e){
+            // fallback: select and prompt
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch(err){}
+            ta.remove();
+          }
+          // remove from DOM and persist removal
+          removed.add(String(idx));
+          saveRemovedSet(removed);
+          li.remove();
+          updateCount();
+          // optional small notification
+          showTempMessage('Review copied — now open the Google review link and paste.');
+        });
+        list.appendChild(li);
+      });
+      updateCount();
+    }
+
+    function updateCount(){
+      const removed = getRemovedSet();
+      const remain = reviews.length - removed.size;
+      const txt = document.getElementById('countText');
+      txt.textContent = remain + (remain === 1 ? ' review available' : ' reviews available');
+    }
+
+    // restore button: clears localStorage so reviews reappear (only on this browser)
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      if(!confirm('Restore all reviews on this browser? This will make removed reviews visible again here only.')) return;
+      localStorage.removeItem(STORAGE_KEY);
+      render();
+    });
+
+    // small temporary toast
+    function showTempMessage(msg){
+      const el = document.createElement('div');
+      el.textContent = msg;
+      Object.assign(el.style, {
+        position:'fixed',left:'50%',transform:'translateX(-50%)',bottom:'22px',
+        background:'#111',color:'#fff',padding:'10px 14px',borderRadius:'10px',zIndex:9999,opacity:0.98
+      });
+      document.body.appendChild(el);
+      setTimeout(()=> el.remove(),3600);
+    }
+
+    // basic HTML escape
+    function escapeHtml(s){
+      return s.replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]; });
+    }
+
+    // init
+    render();
+  </script>
+</body>
+</html>
